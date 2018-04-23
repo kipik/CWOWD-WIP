@@ -4,15 +4,203 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Cwowd v3 - Essai de Homepage</title>
 
   <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-  <h1>hello world</h1>
 
-  <h2>test pour voir</h2>
+  <!-- Navigation rapide | En bandeau sous Logo sur small scrren | Sidebar en Large Screen -->
+<header class="main-header">
+  <div class="container grid">
+    <div class="logo"><img src="img/logo.png" alt="logo cwowd"></div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#" class="active">Accueil</a></li>
+        <li><a href="#">Discussions</a></li>
+        <li><a href="#">Derniers jours</a></li>
+        <li><a href="#">Nouveaux projets</a></li>
+        <li><a href="#">Mes financements</a></li>
+        <li><a href="#">Connexion</a></li>
+        <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+     <!-- Forum | Affichage des 10 dernières discussions actives -->
+<section class="actu-forum">
+ <div class="container grid">
+   <div class="discussions">
+     <h2>On en discute</h2>
+     <p>Les discussions les plus actives</p>
+     <div class="scrolling-wrapper">
+       <div class="card">
+         <div class="card-image">
+           <img src="img/tour-operator.jpg">
+         </div>
+         <div class="right-content">
+           <span class="card-title">Tour Operator</span>
+           <div class="card-content"><p>I am a very simple card.</p></div>
+           <div class="card-action">
+             <a href="#">En savoir Plus</a>
+             <a href="#">On en discute</a>
+           </div>
+         </div>
+       </div>
+       <div class="card">
+         <div class="card-image">
+           <img src="img/captive.jpg">
+         </div>
+         <div class="right-content">
+           <span class="card-title">Captive</span>
+           <div class="card-content">I am a very simple card. I am good at containing small bits of information.</div>
+           <div class="card-action">
+             <a href="#">En savoir Plus</a>
+             <a href="#">On en discute</a>
+           </div>
+         </div>
+       </div>
+       <div class="card">
+         <div class="card-image">
+           <img src="img/deca-slayer.jpg">
+         </div>
+         <div class="right-content">
+           <span class="card-title">Deca Slayer</span>
+           <div class="card-content">I am a very simple card. I am good at containing small bits of information.</div>
+           <div class="card-action">
+             <a href="#">En savoir Plus</a>
+             <a href="#">On en discute</a>
+           </div>
+         </div>
+       </div>
+       <div class="card">
+         <div class="card-image">
+           <img src="img/eye-for-an-eye.jpg">
+         </div>
+         <div class="right-content">
+           <span class="card-title">Eye for an Eye</span>
+           <div class="card-content">I am a very simple card. I am good at containing small bits of information.</div>
+           <div class="card-action">
+             <a href="#">En savoir Plus</a>
+             <a href="#">On en discute</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+<section class="actu-projets">
+  <div class="en-cours">
+    <h2>Les projets à suivre en ce moment</h2>
+    <p>Les projets recommandés par les membres de cwowd</p>
+    <div class="carousel">
+      <a class="carousel-item" href="#one!"><img src="img/tour-operator.jpg"></a>
+      <a class="carousel-item" href="#two!"><img src="img/captive.jpg"></a>
+      <a class="carousel-item" href="#three!"><img src="img/deca-slayer.jpg"></a>
+      <a class="carousel-item" href="#four!"><img src="img/dual-powers.png"></a>
+      <a class="carousel-item" href="#five!"><img src="img/eye-for-an-eye.jpg"></a>
+      <a class="carousel-item" href="#one!"><img src="img/fresco-et-shogun-big-box.jpg"></a>
+      <a class="carousel-item" href="#two!"><img src="img/knights-of-glory.jpg"></a>
+      <a class="carousel-item" href="#three!"><img src="img/Pelegrinus.png"></a>
+      <a class="carousel-item" href="#four!"><img src="img/Posthuman-Saga.jpg"></a>
+      <a class="carousel-item" href="#five!"><img src="img/Miskatonic-University-Restricted-Collection.png"></a>
+    </div>
+  </div>
+</section>
+<section class="actu-grouped">
+  <div class="grouped">
+    <h2>Les bons plans</h2>
+    <p>Les Pledges Groupés qui vous sont accessibles</p>
+    <div class="scrolling-wrapper">
+      <div class="card">
+        <div class="card-image">
+          <img src="img/tour-operator.jpg">
+        </div>
+        <div class="right-content">
+          <span class="card-title">Tour Operator</span>
+          <div class="card-content">I am a very simple card.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="img/captive.jpg">7
+        </div>
+        <div class="right-content">
+          <span class="card-title">Captive</span>
+          <div class="card-content">I am a very simple card. I am good at containing small bits of information.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="img/deca-slayer.jpg">
+        </div>
+        <div class="right-content">
+          <span class="card-title">Deca Slayer</span>
+          <div class="card-content">I am a very simple card. I am good at containing small bits of information.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="img/eye-for-an-eye.jpg">
+        </div>
+        <div class="right-content">
+          <span class="card-title">Eye for an Eye</span>
+          <div class="card-content">I am a very simple card. I am good at containing small bits of information.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="img/fresco-et-shogun-big-box.jpg">
+        </div>
+        <div class="right-content">
+          <span class="card-title">Fresco et Shogun Big Boxes</span>
+          <div class="card-content">
+            <p>Small - full width déroulant horizontalement | Large - alignés en colonne verticale</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="img/knights-of-glory.jpg">
+        </div>
+        <div class="right-content">
+          <span class="card-title">Knights of Glory</span>
+          <div class="card-content">
+            <p>Small - full width déroulant horizontalement | Large - alignés en colonne verticale</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="dist/img/pelegrinus.png">
+        </div>
+        <div class="right-content">
+          <span class="card-title">Pelegrinus</span>
+          <div class="card-content">
+            <p>Small - full width déroulant horizontalement | Large - alignés en colonne verticale</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="dock">
+  <nav>
+    <div class="navdock">
+      <ul class="tabs tabs-transparent">
+        <li><a href="#"><i class="material-icons">search</i></a></li>
+        <li><a href="#"><i class="material-icons">view_module</i></a></li>
+        <li><a href="#"><i class="material-icons">refresh</i></a></li>
+        <li><a href="#"><i class="material-icons">more_vert</i></a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
 
 </body>
 

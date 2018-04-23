@@ -49,7 +49,7 @@ gulp.task('useref', function() {
 
 // Optimizing Images
 gulp.task('images', function() {
-  return gulp.src('dev/img/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('dev/assets/img/**/*.+(png|jpg|jpeg|gif|svg)')
     // Caching images that ran through imagemin
     .pipe(cache(imagemin({
       interlaced: true,

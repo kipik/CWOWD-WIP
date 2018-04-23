@@ -419,22 +419,28 @@ html {
 *::after {
   box-sizing: inherit; }
 
+body {
+  background-color: #ededed; }
+
 /**
  * Basic styles for links
  */
 a {
-  color: #e50050;
+  color: #328cc1;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #222222;
+    color: #0b3c5d;
     text-decoration: underline; }
 
 /**
  * Basic typography style for copy text
  */
 body {
-  color: #222222;
+  color: #1d2731;
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+h2 {
+  color: #d9b310; }
 
 /**
  * Clear inner floats
@@ -451,8 +457,6 @@ body {
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  max-width: 1180px;
-  /* 1 */
   margin-left: auto;
   /* 2 */
   margin-right: auto;

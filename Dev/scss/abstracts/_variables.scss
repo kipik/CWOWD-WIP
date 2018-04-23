@@ -1,52 +1,45 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
-
-
-
-
-
 /// Regular font family
-/// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 /// Code (monospace) font family
-/// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
 
 
+$light-color: rgb(200, 200, 200);
 
+$subs-color: rgb(217, 179, 16);
 
-/// Copy text color
-/// @type Color
-$text-color: rgb(34, 34, 34) !default;
+$base-color: rgb(50, 140, 193);
 
-/// Main brand color
-/// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$contrast-color: rgb(11, 60, 93);
 
-/// Light grey
-/// @type Color
+$dark-color: rgb(29, 39, 49);
+
+// /// Light grey
+// /// @type Color
 $light-grey: rgb(237, 237, 237) !default;
-
-/// Medium grey
-/// @type Color
+//
+// /// Medium grey
+// /// @type Color
 $mid-grey: rgb(153, 153, 153) !default;
-
-/// Dark grey
-/// @type Color
+//
+// /// Dark grey
+// /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
 
 
-
-
-/// Container's maximum width
-/// @type Length
-$max-width: 1180px !default;
-
-
+//
+//
+// /// Container's maximum width
+// /// @type Length
+// $max-width: 1180px !default; 1920
+//
+//
 
 
 
@@ -69,3 +62,23 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+
+
+
+// Names
+$white: #fff;
+$black: #000;
+
+$aquamarine: #7fffd4;
+$alabaster: #f9f9f9;
+$alto: #d9d9d9;
+$mine-shaft: #333;
+
+// Roles
+$primary: $white;
+$secondary: $alabaster;
+$accent: $aquamarine;
+
+$text: $mine-shaft;
+$border: $alto;
