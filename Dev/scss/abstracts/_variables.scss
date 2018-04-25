@@ -1,34 +1,22 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
-/// Regular font family
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+/// $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 /// Code (monospace) font family
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+/// $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
 
 
 $light-color: rgb(200, 200, 200);
-
 $subs-color: rgb(217, 179, 16);
-
 $base-color: rgb(50, 140, 193);
-
 $contrast-color: rgb(11, 60, 93);
-
 $dark-color: rgb(29, 39, 49);
 
-// /// Light grey
-// /// @type Color
+// /// Gris
 $light-grey: rgb(237, 237, 237) !default;
-//
-// /// Medium grey
-// /// @type Color
 $mid-grey: rgb(153, 153, 153) !default;
-//
-// /// Dark grey
-// /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
 
@@ -67,18 +55,18 @@ $base-url: '/assets/' !default;
 
 
 // Names
-$white: #fff;
-$black: #000;
-
-$aquamarine: #7fffd4;
-$alabaster: #f9f9f9;
-$alto: #d9d9d9;
-$mine-shaft: #333;
-
-// Roles
-$primary: $white;
-$secondary: $alabaster;
-$accent: $aquamarine;
-
-$text: $mine-shaft;
-$border: $alto;
+// $white: #fff;
+// $black: #000;
+//
+// $aquamarine: #7fffd4;
+// $alabaster: #f9f9f9;
+// $alto: #d9d9d9;
+// $mine-shaft: #333;
+//
+// // Roles
+// $primary: $white;
+// $secondary: $alabaster;
+// $accent: $aquamarine;
+//
+// $text: $mine-shaft;
+// $border: $alto;

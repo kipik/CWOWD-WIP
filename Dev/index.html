@@ -29,26 +29,88 @@
   </div>
 </header>
 
+<!--
+https://codepen.io/choogoor/pen/YWBxAg -->
+
+<div class="row">
+  <div class="example-1 card">
+    <div class="wrapper">
+      <div class="date">
+        <span class="day">12</span>
+        <span class="month">Aug</span>
+        <span class="year">2016</span>
+      </div>
+      <div class="data">
+        <div class="content">
+          <span class="author">Jane Doe</span>
+          <h1 class="title"><a href="#">Boxing icon has the will for a couple more fights</a></h1>
+          <p class="text">The highly anticipated world championship fight will take place at 10am and is the second major boxing blockbuster in the nation after 43 years.</p>
+          <label for="show-menu" class="menu-button"><span></span></label>
+        </div>
+        <input type="checkbox" id="show-menu" />
+        <ul class="menu-content">
+          <li>
+            <a href="#" class="fa fa-bookmark-o"></a>
+          </li>
+          <li><a href="#" class="fa fa-heart-o"><span>47</span></a></li>
+          <li><a href="#" class="fa fa-comment-o"><span>8</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="example-2 card">
+    <div class="wrapper">
+      <div class="header">
+        <div class="date">
+          <span class="day">12</span>
+          <span class="month">Aug</span>
+          <span class="year">2016</span>
+        </div>
+        <ul class="menu-content">
+          <li>
+            <a href="#" class="fa fa-bookmark-o"></a>
+          </li>
+          <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+          <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+        </ul>
+      </div>
+      <div class="data">
+        <div class="content">
+          <span class="author">Jane Doe</span>
+          <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
+          <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+          <a href="#" class="button">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
      <!-- Forum | Affichage des 10 dernières discussions actives -->
 <section class="actu-forum">
- <div class="container grid">
+ <!-- <div class="container grid">
    <div class="discussions">
      <h2>On en discute</h2>
      <p>Les discussions les plus actives</p>
-     <div class="scrolling-wrapper">
-       <div class="card">
-         <div class="card-image">
-           <img src="assets/img/tour-operator.jpg">
-         </div>
-         <div class="right-content">
-           <span class="card-title">Tour Operator</span>
-           <div class="card-content"><p>I am a very simple card.</p></div>
-           <div class="card-action">
-             <a href="#">En savoir Plus</a>
-             <a href="#">On en discute</a>
-           </div>
-         </div>
-       </div>
+     <div class="scrolling-wrapper"> -->
+      <div class="card">
+        <!-- <div class="card-content"> -->
+          <!-- <div class="card-image"> -->
+            <img class="card-image" src="assets/img/tour-operator.jpg">
+          <!-- </div> -->
+          <h2 class="card-editor">Tasty Minstrel</h2>
+          <h1 class="card-title">Tour Operator</h1>
+          <p class="card-text">Du draft avec des monstres trop choupinous et un petit twist : le draft ne se passe pas selon un ordre pré-établi mais chacun décide du joueur à qui il remet son paquet..</p>
+          <div class="card-action">
+            <a class="btn" href="#">En savoir Plus</a>
+            <a class="btn" href="#">On en discute</a>
+          </div>
+        <!-- </div> -->
+      </div>
        <div class="card">
          <div class="card-image">
            <img src="assets/img/captive.jpg">
@@ -88,9 +150,9 @@
            </div>
          </div>
        </div>
-     </div>
+     <!-- </div>
    </div>
- </div>
+ </div> -->
 </section>
 <section class="actu-projets">
   <div class="en-cours">
@@ -203,5 +265,5 @@
 
 
 </body>
-
+<script type="text/javascript" src="/js/main.js"></script>
 </html>
