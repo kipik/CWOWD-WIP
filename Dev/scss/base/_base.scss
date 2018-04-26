@@ -28,12 +28,12 @@ body {
 /**
  * Basic styles for links
  */
-a {
-  color: $base-color;
-  text-decoration: none;
+ a {
+   color: $primary;
+   text-decoration: none;
 
-  @include on-event {
-    color: $contrast-color;
-    text-decoration: underline;
-  }
-}
+   @include on-event {
+     color: $accent;
+     text-decoration: underline;
+   }
+ }
