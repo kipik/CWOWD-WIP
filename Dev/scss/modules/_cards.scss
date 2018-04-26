@@ -22,14 +22,14 @@ sans-serif;
 * {
   box-sizing: border-box;
 }
-
-body {
-  background-image: linear-gradient(to right, $regal-blue, $san-juan);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
-  font-family: $open-sans;
-}
+//
+// body {
+//   background-image: linear-gradient(to right, $regal-blue, $san-juan);
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   height: 100vh;
+//   font-family: $open-sans;
+// }
 
 a {
   text-decoration: none;

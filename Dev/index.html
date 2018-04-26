@@ -12,9 +12,31 @@
 <body>
 
   <!-- Navigation rapide | En bandeau sous Logo sur small scrren | Sidebar en Large Screen -->
-<header class="main-header">
-  <div class="container grid">
-    <div class="logo"><img src="assets/img/logo.png" alt="logo cwowd"></div>
+<!-- <header class="main-header"> -->
+<header class="header">
+  <!-- <div class="container grid"> -->
+  <nav class="hamburger">
+    <button class="hamburger__button">
+      <span class="hamburger__button-bar"></span>
+      <span class="hamburger__button-bar"></span>
+      <span class="hamburger__button-bar"></span>
+    </button>
+  </nav>
+  <nav class="desktop">
+    <div class="desktop__navigation">
+      <div>Discussions</div>
+      <div>Derniers jours</div>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile">
+  <ul class="mobile__items">
+    <li class="mobile__item">Discussions</li>
+    <li class="mobile__item">Derniers jours</li>
+  </ul>
+</div>
+    <!-- <div class="logo"><img src="assets/img/logo.png" alt="logo cwowd"></div>
     <nav class="main-nav">
       <ul>
         <li><a href="#" class="active">Accueil</a></li>
@@ -27,7 +49,7 @@
       </ul>
     </nav>
   </div>
-</header>
+</header> -->
 
 <!--
 https://codepen.io/choogoor/pen/YWBxAg -->
@@ -264,6 +286,7 @@ https://codepen.io/choogoor/pen/YWBxAg -->
 </div>
 
 
+
 </body>
-<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
 </html>
