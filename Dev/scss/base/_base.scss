@@ -18,22 +18,28 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
   background-color: $light-grey;
+  margin: 0;
+  background-image: linear-gradient(to right, $regal-blue, $san-juan);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  font-family: $open-sans;
 }
 
 /**
  * Basic styles for links
  */
  a {
-   color: base;
-   text-decoration: none;
+    color: $base;
+    text-decoration: none;
 
-   @include on-event {
-     color: $accent;
-     text-decoration: underline;
-   }
- }
+    @include on-event {
+      color: $accent;
+      text-decoration: none;
+    }
+  }

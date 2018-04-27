@@ -11,29 +11,38 @@
 
 <body>
 
+  <!-- <div class="logo"><img src="assets/img/logo.png" alt="logo cwowd"></div> -->
+
+
   <!-- Navigation rapide | En bandeau sous Logo sur small scrren | Sidebar en Large Screen -->
-<!-- <header class="main-header"> -->
 <header class="header">
-  <!-- <div class="container grid"> -->
-  <nav class="hamburger">
-    <button class="hamburger__button">
-      <span class="hamburger__button-bar"></span>
-      <span class="hamburger__button-bar"></span>
-      <span class="hamburger__button-bar"></span>
+  <nav class="burger">
+    <button class="burger__button">
+      <span class="burger__button-bar"></span>
+      <span class="burger__button-bar"></span>
+      <span class="burger__button-bar"></span>
     </button>
   </nav>
-  <nav class="desktop">
-    <div class="desktop__navigation">
-      <div>Discussions</div>
-      <div>Derniers jours</div>
+  <nav class="desktop-nav">
+    <div class="desktop-nav__navigation">
+      <div><a href="#" class="active">Accueil</a></div>
+      <div><a href="#">Discussions</a></div>
+      <div><a href="#">Derniers jours</a></div>
+      <div><a href="#">Nouveaux projets</a></div>
+      <div><a href="#">Mes financements</a></div>
+      <div><a href="#">Connexion</a></div>
     </div>
   </nav>
 </header>
 
-<div class="mobile">
-  <ul class="mobile__items">
-    <li class="mobile__item">Discussions</li>
-    <li class="mobile__item">Derniers jours</li>
+<div class="mobile-nav">
+  <ul class="mobile-nav__items">
+    <li class="mobile-nav__item"><a href="#" class="active">Accueil</a></li>
+    <li class="mobile-nav__item"><a href="#">Discussions</a></li>
+    <li class="mobile-nav__item"><a href="#">Derniers jours</a></li>
+    <li class="mobile-nav__item"><a href="#">Nouveaux projets</a></li>
+    <li class="mobile-nav__item"><a href="#">Mes financements</a></li>
+    <li class="mobile-nav__item"><a href="#">Connexion</a></li>
   </ul>
 </div>
     <!-- <div class="logo"><img src="assets/img/logo.png" alt="logo cwowd"></div>
@@ -55,8 +64,8 @@
 https://codepen.io/choogoor/pen/YWBxAg -->
 
 <div class="row">
-  <div class="example-1 card">
-    <div class="wrapper">
+  <!-- <div class="example-1 card">
+    <div class="card-wrapper">
       <div class="date">
         <span class="day">12</span>
         <span class="month">Aug</span>
@@ -79,30 +88,35 @@ https://codepen.io/choogoor/pen/YWBxAg -->
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="example-2 card">
-    <div class="wrapper">
-      <div class="header">
-        <div class="date">
-          <span class="day">12</span>
-          <span class="month">Aug</span>
-          <span class="year">2016</span>
-        </div>
-        <ul class="menu-content">
-          <li>
-            <a href="#" class="fa fa-bookmark-o"></a>
-          </li>
-          <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
-          <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+    <div class="card-wrapper">
+        <div class="card-header">
+          <div class="card-date">
+            <span class="card-day">12</span>
+            <span class="card-month">Août</span>
+            <span class="card-year">2018</span>
+          </div>
+        <ul class="card-hotness">
+          <li><a href="#" class="fa fa-bookmark-o"><span>87</span></a></li>
+          <li><a href="#" class="fa fa-heart-o"><span>48</span></a></li>
+          <li><a href="#" class="fa fa-comment-o"><span>123</span></a></li>
         </ul>
       </div>
       <div class="data">
         <div class="content">
-          <span class="author">Jane Doe</span>
-          <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
-          <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
-          <a href="#" class="button">Read more</a>
+          <span class="editor">Tasty Minstrel</span>
+          <h1 class="card-title"><a href="#">Court of the Dead: Mourners Call</a></h1>
+          <p class="text">La Mort et son tribunal œuvrent pour que cesse la guerre éternelle que se livrent Enfer et Paradis et que vienne enfin le règne de l’Underworld, le monde des morts.</p>
+          <label for="show-menu" class="menu-button"><span></span></label>
+            <a href="#" class="button">En savoir plus</a>
         </div>
+        <input type="checkbox" id="show-menu" />
+      <ul class="menu-content">
+        <li><a href="#" class="fa fa-bookmark-o"></a></li>
+        <li><a href="#" class="fa fa-heart-o"></a></li>
+        <li><a href="#" class="fa fa-comment-o"></a></li>
+      </ul>
       </div>
     </div>
   </div>

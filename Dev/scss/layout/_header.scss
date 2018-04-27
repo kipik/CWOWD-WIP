@@ -1,27 +1,34 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-body {
-  margin: 0;
-}
+
 
 .header {
-  background: rgb(24, 109, 24);
-  color: white;
+  background: $dark;
+  color: $light;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: $h-header;
   padding: 5px 20px;
+
+  a {
+    color: $light;
+    display: block;
+
+    @include on-event {
+      color: $white;
+      }
+    }
 }
 
 /* hamburger icon */
-.hamburger {
+.burger {
   display:flex;
   align-items: center;
 }
 
-.hamburger__button {
+.burger__button {
   width: 3rem;
   background: transparent;
   border: none;
@@ -30,37 +37,37 @@ body {
   padding-bottom: 0;
 }
 
-.hamburger__button:focus {
+.burger__button:focus {
   outline: none;
 }
 
-.hamburger__button-bar {
+.burger__button-bar {
   width: 100%;
   height: 0.2rem;
-  background: white;
+  background: $second;
   display: block;
   margin: 0.6rem 0;
 }
 
 /* Desktop */
-.desktop__navigation {
+.desktop-nav__navigation {
   display: flex;
   justify-content: flex-end;
 }
 
-.desktop__navigation div {
+.desktop-nav__navigation div {
   padding-left: 20px;
   display: none;
 }
 
 /* mobile navigation */
-.mobile {
+.mobile-nav {
   position: fixed;
   top: 0;
   background-color: rgba(90, 90, 90, 0.9);
   width: 80vw;
   height: 100vh;
-  color: white;
+  color: $white;
   // display: flex;
   justify-content: center;
   align-items: center;
@@ -70,12 +77,20 @@ body {
   transition: transform 400ms ease-out;
 }
 
-.mobile__items {
+.mobile-nav__items {
   list-style: none;
   padding: 0;
   margin: 0;
   font-size: 2rem;
+  a {
+    color: $white;
+
+    @include on-event {
+      color: $accent;
+    }
+  }
 }
+
 
 .open {
   display: flex;
@@ -85,11 +100,11 @@ body {
 }
 
 @media (min-width: 40rem) {
-  .hamburger__button {
+  .burger__button {
     display: none;
   }
 
-  .desktop__navigation div {
+  .desktop-nav__navigation div {
     display: block;
   }
 }

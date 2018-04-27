@@ -1,6 +1,6 @@
 
-var hamburgerButton = document.querySelector('.hamburger__button');
-var mobileNav = document.querySelector('.mobile');
+var burgerButton = document.querySelector('.burger__button');
+var mobileNav = document.querySelector('.mobile-nav');
 
 function openMobile() {
     mobileNav.classList.add('open');
@@ -10,5 +10,5 @@ function closeMobile() {
     mobileNav.classList.remove('open');
 }
 
-hamburgerButton.addEventListener('click', openMobile);
+burgerButton.addEventListener('click', openMobile);
 mobileNav.addEventListener('click', closeMobile);
