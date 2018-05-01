@@ -8,20 +8,14 @@ $grey: #e9e9e9;
 	-webkit-transition: $prop $dur ease;
 }
 
-// @mixin bgImg($url) {
-// 	background: url($url) center no-repeat;
-// 	background-size: cover;
-// }
-
-// body {background: #f1f1f1; margin: 2rem}
-
 .card--horizontal {
 	@include transition(0.3s, height);
+  @include cf;
   height: 180px;
   max-width: 400px;
-	background: #fff;
+	background: $white;
 	border-radius: 3px;
-	box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
 	margin: 0 auto 1.6%;
 	overflow: hidden;
 	position: relative;
@@ -30,48 +24,57 @@ $grey: #e9e9e9;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
+
+
   	  &:hover {
 	  	    .game-details {
 			    left: 0;
   		    }
 
-		      // &.alt {
-		    	//     .game-details {
-			    // 	  right: 0;
-		    	//     }
-    	    // }
-
-/////?????/////
           .photo {
           transform: rotate(5deg) scale(1.3);
           }
+
+          .card-date {
+            display: none;
+          }
+
+          .card-hotness {
+            span {
+              transform: translate(-50%, -10px);
+              opacity: 1;
+            }
       }
-    // &.alt .photo {
-    //   transform: rotate(-5deg) scale(1.3);
-    // }
+    }
 
-	// &.alt {
-  //   .photo {
-  //     float: right;
-  //   }
+  		// .game-details {
+			// right: -100%;
+			// left: inherit;
+      // padding-left: 30px;
+	  	// }
 
-/////?????/////
-  		.game-details {
-			right: -100%;
-			left: inherit;
-      padding-left: 30px;
-	  	}
+      .card-hotness {
+        float: left;
+        z-index:10;
+        padding: 0;
+        margin-top: 15px;
+        // position: fixed;
+        // bottom: 0;
+        // left: 50%;
 
-/////?????/////
-      // .description {
-      // float: right;
+        li {
+          margin: 0 5px;
+          position: relative;
+          display: inline;
 
-          // &:before {
-          // transform: skewX(5deg);
-          // right: -15px;
-          // left: inherit;
-          // }
-      // }
+        }
+        span {
+          transition: all 0.3s;
+          opacity: 0;
+          // display: inline;
+
+        }
+      }
 
     	.photo {
 		  height: 180px;
@@ -80,27 +83,51 @@ $grey: #e9e9e9;
       @include transition(0.5s);
       float: left;
       height: 100%;
-      width: 40%;
+      width: 35%;
+
+      .card-date {
+        // z-index:1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $accent;
+        color: $white;
+        padding: 0.3em;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1em;
+        text-shadow: 2px 3px 2px rgba($black, 0.18);
+
+        span {
+          display: inline-block;
+          text-align: center;
+        }
       }
+
+  }
 
 	    .game-details {
 	    @include transition(0.3s);
   		background: rgba(0, 0, 0, 0.6);
 	  	box-sizing: border-box;
 		  color: #fff;
-  		font-family: "Open Sans";
+      font-family: $open-sans;
 	  	list-style: none;
 		  margin: 0;
   		padding: 10px 15px;
 	  	height: 180px;
-      width: 40%;
+      width: 35%;
+      right: -100%;
+
+      display: flex;
+      flex-direction: column;
+      flex-flow: wrap;
+
 
 	  	/*POSITION*/
 		  position: absolute;
   		top: 0;
 	  	left: -100%;
-      // left: -15px;
-      // bottom: 0;
 
 		      > li {
 			    padding: 3px 0;
@@ -111,6 +138,12 @@ $grey: #e9e9e9;
 		    	margin-right: 10px;
     			vertical-align: middle;
 		      }
+
+          .editor {
+            font-family: $open-sans;
+            font-size: 0.8em;
+            font-weight: 600;
+          }
 
     	  	.editor:before {
 		  	  content: "\f007";
@@ -125,25 +158,24 @@ $grey: #e9e9e9;
       				list-style: none;
 			      	margin: 0;
     			  	padding: 0;
+              font-weight: 300;
 		        	}
 
 		        	li {
               display: block;
               margin-right: 3px;
 
-                  &:before {
-                  content: "\f02b";
-                  }
+                  // &:before {
+                  // content: "\f02b";
+                  // }
               }
           }
 
       		a {
     			color: inherit;
-			// border-bottom: 1px dotted;
-      // text-decoration: none;
 
 		        	&:hover {
-      				color: $green;
+      				color: $second;
 			        }
 		      }
 	    }
@@ -153,7 +185,7 @@ $grey: #e9e9e9;
 		  box-sizing: border-box;
 		  position: relative;
       float: left;
-      width: 60%;
+      width: 65%;
       z-index: 0;
 
           &:before {
@@ -164,24 +196,22 @@ $grey: #e9e9e9;
           z-index: -1;
 
            /*POSITION*/
-           // top: 0;
-           // left: -15px;
-           // bottom: 0;
            position: absolute;
-           left: -15px;
+           left: -5px;
            top: 0;
            bottom: 0;
           }
 
 	    	h1 {
-			  font-family: "Roboto";
+        font-family: $open-sans;
 			  line-height: 1em;
-			  margin: 0 0 10px 0;
+			  margin: 0 0 8px 0;
+        font-size: 1.8em;
 		    }
 
 		    h2 {
 			  color: $grey / 1.5;
-  			font-family: "Open Sans";
+        font-family: $open-sans;
 	  		line-height: 1.2em;
 		  	text-transform: uppercase;
 			  font-size: 1em;
@@ -193,10 +223,15 @@ $grey: #e9e9e9;
 			  position: relative;
   			margin: 0;
 	  		padding-top: 20px;
+        font-size: 0.9em;
+        font-weight: 500;
+        line-height: 1.1em;
+
+
 
 		      	&:after {
 				    content: "";
-				    background: $green;
+				    background: $second-down;
 				    height: 6px;
 				    width: 40px;
 
@@ -208,7 +243,7 @@ $grey: #e9e9e9;
     		}
 
 		    a {
-  			color: $green;
+  			color: $second;
 	  		margin-bottom: 10px;
 		  	float: right;
 
@@ -228,70 +263,46 @@ $grey: #e9e9e9;
 		      	}
 	    	}
 	  }
+
+
+    // .card-hotness {
+    //     @include cf;
+    //     margin: 0;
+    //     padding: 0;
+    //     list-style-type: none;
+    //     li {
+    //       display: inline-block;
+    //     }
+    //     a {
+    //       color: inherit;
+    //     }
+    //     span {
+    //       position: absolute;
+    //       left: 50%;
+    //       top: 0;
+    //       font-size: 1.2em;
+    //       font-weight: 700;
+    //       font-family: 'Open Sans';
+    //       transform: translate(-50%, 0);
+    //     }
+    //   }
+
+
+
+
+
 }
 
-// @media screen and (min-width: 100px) {
-	// .card--horizontal {
-		// height: 200px;
-		// max-width: 600px;
 
-		// &:hover {
-			// .photo {
-			// 	transform: rotate(5deg) scale(1.3);
-			// }
 
-			// &.alt .photo {
-				// transform: rotate(-5deg) scale(1.3);
-			// }
-		// }
 
-		// &.alt {
-		// 	.game-details {
-				// padding-left: 30px;
-			// }
-
-			// .description {
-			// 	float: right;
-      //
-			// 	&:before {
-			// 		transform: skewX(5deg);
-			// 		right: -15px;
-			// 		left: inherit;
-			// 	}
-			// }
-
-			// .photo {
-			// 	float: right;
-			// }
-		// }
-
-		// .photo {
-		// 	@include transition(0.5s);
-    //
-		// 	float: left;
-		// 	height: 100%;
-		// 	width: 40%;
-		// }
-
-		// .game-details {
-		// 	width: 40%;
-		// }
-
-		// .description {
-		// 	float: left;
-		// 	width: 60%;
-		// 	z-index: 0;
-    //
-		// 	&:before {
-		// 		transform: skewX(-5deg);
-		// 		content: "";
-		// 		background: #fff;
-		// 		width: 100%;
-		// 		z-index: -1;
-
-				/*POSITION*/
-
-// 			}
-// 		}
-// 	}
-// }
+      // .card-header {
+      //   // background: url(/assets/img/eye-for-an-eye.jpg) center / cover no-repeat;
+      //   &:hover {
+      //     .card-hotness {
+      //       span {
+      //         transform: translate(-50%, -10px);
+      //         opacity: 1;
+      //       }
+      //     }
+      //   }
