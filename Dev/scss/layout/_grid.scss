@@ -1,0 +1,21 @@
+.card--horizontal {
+  // grid-template-columns: [start-photo] 1fr [end-photo start-description] 2fr [end-description];
+  // grid-template-rows: [start-photo start-description] 180px [end-photo end-description];
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 160px 20px;
+  grid-template-areas:
+  "photo description"
+  "date hotness";
+  .photo {
+    grid-area: photo;
+  }
+  .description {
+    grid-area: description;
+  }
+  .card-date {
+    grid-area: date;
+  }
+  .card-header {
+    grid-area: hotness;
+  }
+}

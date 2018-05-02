@@ -577,10 +577,14 @@ a {
 
 /*PEN STYLES*/
 .card--horizontal {
-  transition: height 0.3s ease;
-  -webkit-transition: height 0.3s ease;
   height: 180px;
   max-width: 400px;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 160px 20px;
+  grid-template-areas: "photo description" "date hotness";
+  transition: height 0.3s ease;
+  -webkit-transition: height 0.3s ease;
   background: #fff;
   border-radius: 3px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
@@ -591,6 +595,14 @@ a {
   line-height: 1.45em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  .card--horizontal .photo {
+    grid-area: photo; }
+  .card--horizontal .description {
+    grid-area: description; }
+  .card--horizontal .card-date {
+    grid-area: date; }
+  .card--horizontal .card-header {
+    grid-area: hotness; }
   .card--horizontal::before, .card--horizontal::after {
     content: '';
     display: table; }
@@ -609,7 +621,11 @@ a {
     float: left;
     z-index: 10;
     padding: 0;
-    margin-top: 15px; }
+    margin-top: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    display: flex; }
     .card--horizontal .card-hotness li {
       margin: 0 5px;
       position: relative;
@@ -618,13 +634,11 @@ a {
       transition: all 0.3s;
       opacity: 0; }
   .card--horizontal .photo {
-    height: 180px;
-    position: relative;
+    height: 160px;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    float: left;
     height: 100%;
-    width: 35%; }
+    overflow: hidden; }
     .card--horizontal .photo .card-date {
       position: absolute;
       bottom: 0;
@@ -690,7 +704,6 @@ a {
     box-sizing: border-box;
     position: relative;
     float: left;
-    width: 65%;
     z-index: 0; }
     .card--horizontal .description:before {
       transform: skewX(-5deg);
