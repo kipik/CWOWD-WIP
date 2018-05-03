@@ -13,97 +13,178 @@ $grey: #e9e9e9;
   max-width: 400px;
 	@include transition(0.3s, height);
 	@include cf;
-
 	background: $white;
 	border-radius: 3px;
-	box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+	box-shadow: 0 15px 12px rgba($black, 0.2);
 	margin: 0 auto 1.6%;
 	overflow: hidden;
 	position: relative;
 	font-size: 14px;
-	line-height: 1.45em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
   display: grid;
-  // grid-template-columns: [start-photo] 1fr [end-photo start-description] 2fr [end-description];
-  // grid-template-rows: [start-photo start-description] 180px [end-photo end-description];
   grid-template-columns: 35% 65%;
   grid-template-rows: 160px 20px;
 	grid-gap: 0;
   grid-template-areas:
   "photo description"
-  "date hotness";
+  "hotness hotness";
 
-  .photo {
-    grid-area: photo;
-		// height: 160px;
-		// position: relative;
+	  .photo {
+  	  grid-area: photo;
+			@include transition(0.5s);
+			height: 100%;
+			transform: skewX(-10deg);
+			z-index: 0;
+			position: absolute;
+			left: -20px;
+		}
 
-		@include transition(0.5s);
-		// float: left;
-		height: 100%;
-		// width: 35%;
-		overflow:hidden;
-	}
+			// .card-date {
+			// 	// grid-area: date;
+			// 	background-color: $second-down;
+			// 	// z-index:1;
+			// 	position: absolute;
+			// 	top: 0;
+			// 	right: 90px;
+			// 	// transform: translateX(10px);
+			// 	// background-color: $accent;
+			// 	color: $white;
+			// 	// padding: 0.3em;
+			// 	text-transform: uppercase;
+			// 	font-weight: 400;
+			// 	font-size: 0.9em;
+			// 	text-shadow: 2px 3px 2px rgba($black, 0.18);
+			//
+			// 	// span {
+			// 	//   display: inline-block;
+			// 	//   text-align: center;
+			// 	// }
+			// }
 
-  .description {
-    grid-area: description;
-  }
+	  .description {
+  	grid-area: description;
+		transform: skewX(-10deg);
+		padding: 8px;
+		background-color: $white;
 
-  .card-date {
-    grid-area: date;
-		background-color: $second-down;
-		// z-index:1;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    // background-color: $accent;
-    color: $white;
-    // padding: 0.3em;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 0.9em;
-    text-shadow: 2px 3px 2px rgba($black, 0.18);
+				h1 {
+				font-family: $open-sans;
+				line-height: 1.2em;
+				margin: 0 0 7px 0;
+				font-size: 1.7em;
+				transform: skewX(10deg);
+				}
 
-    // span {
-    //   display: inline-block;
-    //   text-align: center;
-    // }
-  }
+				h2 {
+				color: $grey / 1.5;
+				font-family: $open-sans;
+				line-height: 1.2em;
+				text-transform: uppercase;
+				font-size: 1.1em;
+				font-weight: 400;
+				margin: 1% 0;
+				transform: skewX(10deg);
+				}
 
-  .card-header {
-    grid-area: hotness;
-		background-color: $base;
+				p {
+				transform: skewX(10deg);
+				// position: relative;
+				margin: 0;
+				padding-top: 12px;
+				font-size: 0.9em;
+				font-weight: 400;
+				line-height: 1.2em;
 
-		.card-hotness {
-			 // float: left;
-			 // z-index:10;
-			 padding: 0;
-			 // margin-top: 15px;
-			 // position: fixed;
-			 // bottom: 0;
-			 // left: 50%;
-			 display: flex;
+						&:after {
+						content: "";
+						background: $second-down;
+						height: 4px;
+						width: 80px;
+						transform: skewX(-10deg);
 
-			 li {
-					margin: 0 5px;
-				 // position: relative;
-					display: inline;
-					margin: 0;
-			 }
+						/*POSITION*/
+						position: absolute;
+						top: 5px;
+						left: -5px;
+						}
+				}
 
-			 a {
-				 color: $second;
-			 }
+				.more {
+				color: $second;
+				// margin-bottom: 10px;
+				float: right;
 
-			 span {
-				 transition: all 0.3s;
-				 // opacity: 0;
-				 // display: inline;
-			 }
-		 }
-  }
+						&:after {
+						@include transition(0.3s);
+
+						content: "\f061";
+						font-family: FontAwesome;
+						margin-left: -10px;
+						opacity: 0;
+						vertical-align: middle;
+						}
+
+						&:hover:after {
+						margin-left: 5px;
+						opacity: 1;
+						}
+				}
+		}
+
+
+
+	  .card-hotness {
+  	  grid-area: hotness;
+			background-color: $base;
+			z-index: 1;
+			display: grid;
+			grid-template-columns: 35% repeat(3, 1fr);
+			// justify-content: space-between;
+			// justify-self: stretch;
+			// display: flex;
+			// flex-direction: row;
+			// justify-content: space-evenly;
+			// margin: 0;
+			// padding: 0;
+			align-self: bottom;
+
+
+					ul {
+						// display: flex;
+						// flex-direction: row;
+						// justify-content: space-evenly;
+					}
+
+					 // float: left;
+					 // z-index:10;
+					 // margin-top: 15px;
+					 // position: fixed;
+					 // bottom: 0;
+					 // left: 50%;
+
+					 li {
+						// margin: 0 5px;
+					 // position: relative;
+						// display: inline;
+						list-style: none;
+						margin: 0;
+						text-align: center;
+						// justify-self: center;
+						// text-justify: center;
+					 }
+
+					 a {
+						 color: $second;
+					 }
+
+					 span {
+						 transition: all 0.3s;
+						 // opacity: 0;
+						 // display: inline;
+					 }
+				}
 
 
   	  &:hover {
@@ -125,7 +206,7 @@ $grey: #e9e9e9;
               opacity: 1;
             }
       	}
-    }
+
 
   		// .game-details {
 			// right: -100%;
@@ -212,90 +293,8 @@ $grey: #e9e9e9;
 		      }
 	    }
 
-    	.description {
-			transform: skewX(-5deg);
-		  padding: 10px;
-		  // box-sizing: border-box;
-		  position: relative;
-      // float: left;
-      // width: 65%;
-      z-index: 0;
+}
 
-          // &:before {
-          // transform: skewX(-5deg);
-          // content: "";
-          // background: #fff;
-          // width: 100%;
-          // z-index: -1;
-
-           /*POSITION*/
-           position: absolute;
-           left: -5px;
-           top: 0;
-           bottom: 0;
-          }
-
-	    	h1 {
-        font-family: $open-sans;
-			  line-height: 1em;
-			  margin: 0 0 8px 0;
-        font-size: 1.8em;
-		    }
-
-		    h2 {
-			  color: $grey / 1.5;
-        font-family: $open-sans;
-	  		line-height: 1.2em;
-		  	text-transform: uppercase;
-			  font-size: 1em;
-  			font-weight: 400;
-	  		margin: 1.2% 0;
-		    }
-
-	    	p {
-			  position: relative;
-  			margin: 0;
-	  		padding-top: 20px;
-        font-size: 0.9em;
-        font-weight: 500;
-        line-height: 1.1em;
-
-
-
-		      	&:after {
-				    content: "";
-				    background: $second-down;
-				    height: 6px;
-				    width: 40px;
-
-	    			/*POSITION*/
-			    	position: absolute;
-		    		top: 6px;
-		    		left: 0;
-			      }
-    		}
-
-		    .more {
-  			color: $second;
-	  		// margin-bottom: 10px;
-		  	float: right;
-
-			      &:after {
-		    		@include transition(0.3s);
-
-				    content: "\f061";
-	    			font-family: FontAwesome;
-			    	margin-left: -10px;
-	    			opacity: 0;
-			    	vertical-align: middle;
-      			}
-
-			      &:hover:after {
-				    margin-left: 5px;
-    				opacity: 1;
-		      	}
-	    	}
-	  }
 }
 
 
@@ -311,3 +310,45 @@ $grey: #e9e9e9;
       //       }
       //     }
       //   }
+
+
+/////// DELETED /////
+// .photo {
+	// height: 160px;
+	// position: relative;
+	// float: left;
+	// width: 35%;
+	// overflow:hidden;
+	// z-index:0;
+	// transform: skewX(-5deg);
+
+	// .description {
+	// box-sizing: border-box;
+	// float: left;
+	// width: 65%;
+	// position: relative;
+	// z-index: 10;
+
+			// &:before {
+			// transform: skewX(-5deg);
+			// content: "";
+			// background: #fff;
+			// width: 100%;
+			// z-index: -1;
+
+			/*POSITION*/
+			// position: absolute;
+			// left: -5px;
+			// top: 0;
+			// bottom: 0;
+			// }
+
+
+		// .more {
+		// margin-bottom: 10px;
+
+// .card--horizontal {
+	// line-height: 1.45em;
+
+  // grid-template-columns: [start-photo] 1fr [end-photo start-description] 2fr [end-description];
+  // grid-template-rows: [start-photo start-description] 180px [end-photo end-description];
