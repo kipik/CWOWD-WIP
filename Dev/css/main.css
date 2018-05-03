@@ -579,10 +579,6 @@ a {
 .card--horizontal {
   height: 180px;
   max-width: 400px;
-  display: grid;
-  grid-template-columns: 35% 65%;
-  grid-template-rows: 160px 20px;
-  grid-template-areas: "photo description" "date hotness";
   transition: height 0.3s ease;
   -webkit-transition: height 0.3s ease;
   background: #fff;
@@ -594,20 +590,50 @@ a {
   font-size: 14px;
   line-height: 1.45em;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-  .card--horizontal .photo {
-    grid-area: photo; }
-  .card--horizontal .description {
-    grid-area: description; }
-  .card--horizontal .card-date {
-    grid-area: date; }
-  .card--horizontal .card-header {
-    grid-area: hotness; }
+  -moz-osx-font-smoothing: grayscale;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 160px 20px;
+  grid-gap: 0;
+  grid-template-areas: "photo description" "date hotness"; }
   .card--horizontal::before, .card--horizontal::after {
     content: '';
     display: table; }
   .card--horizontal::after {
     clear: both; }
+  .card--horizontal .photo {
+    grid-area: photo;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    height: 100%;
+    overflow: hidden; }
+  .card--horizontal .description {
+    grid-area: description; }
+  .card--horizontal .card-date {
+    grid-area: date;
+    background-color: #f0ac06;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9em;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18); }
+  .card--horizontal .card-header {
+    grid-area: hotness;
+    background-color: #328cc1; }
+    .card--horizontal .card-header .card-hotness {
+      padding: 0;
+      display: flex; }
+      .card--horizontal .card-header .card-hotness li {
+        margin: 0 5px;
+        display: inline;
+        margin: 0; }
+      .card--horizontal .card-header .card-hotness a {
+        color: #d9b310; }
+      .card--horizontal .card-header .card-hotness span {
+        transition: all 0.3s; }
   .card--horizontal:hover .game-details {
     left: 0; }
   .card--horizontal:hover .photo {
@@ -617,42 +643,6 @@ a {
   .card--horizontal:hover .card-hotness span {
     transform: translate(-50%, -10px);
     opacity: 1; }
-  .card--horizontal .card-hotness {
-    float: left;
-    z-index: 10;
-    padding: 0;
-    margin-top: 15px;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    display: flex; }
-    .card--horizontal .card-hotness li {
-      margin: 0 5px;
-      position: relative;
-      display: inline; }
-    .card--horizontal .card-hotness span {
-      transition: all 0.3s;
-      opacity: 0; }
-  .card--horizontal .photo {
-    height: 160px;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    height: 100%;
-    overflow: hidden; }
-    .card--horizontal .photo .card-date {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: #0b3c5d;
-      color: #fff;
-      padding: 0.3em;
-      text-transform: uppercase;
-      font-weight: 400;
-      font-size: 1em;
-      text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18); }
-      .card--horizontal .photo .card-date span {
-        display: inline-block;
-        text-align: center; }
   .card--horizontal .game-details {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -700,63 +690,55 @@ a {
       .card--horizontal .game-details a:hover {
         color: #d9b310; }
   .card--horizontal .description {
+    transform: skewX(-5deg);
     padding: 10px;
-    box-sizing: border-box;
     position: relative;
-    float: left;
-    z-index: 0; }
-    .card--horizontal .description:before {
-      transform: skewX(-5deg);
+    z-index: 0;
+    /*POSITION*/
+    position: absolute;
+    left: -5px;
+    top: 0;
+    bottom: 0; }
+  .card--horizontal h1 {
+    font-family: roboto, "Open Sans", sans-serif;
+    line-height: 1em;
+    margin: 0 0 8px 0;
+    font-size: 1.8em; }
+  .card--horizontal h2 {
+    color: #9b9b9b;
+    font-family: roboto, "Open Sans", sans-serif;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 1.2% 0; }
+  .card--horizontal p {
+    position: relative;
+    margin: 0;
+    padding-top: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    line-height: 1.1em; }
+    .card--horizontal p:after {
       content: "";
-      background: #fff;
-      width: 100%;
-      z-index: -1;
+      background: #f0ac06;
+      height: 6px;
+      width: 40px;
       /*POSITION*/
       position: absolute;
-      left: -5px;
-      top: 0;
-      bottom: 0; }
-    .card--horizontal .description h1 {
-      font-family: roboto, "Open Sans", sans-serif;
-      line-height: 1em;
-      margin: 0 0 8px 0;
-      font-size: 1.8em; }
-    .card--horizontal .description h2 {
-      color: #9b9b9b;
-      font-family: roboto, "Open Sans", sans-serif;
-      line-height: 1.2em;
-      text-transform: uppercase;
-      font-size: 1em;
-      font-weight: 400;
-      margin: 1.2% 0; }
-    .card--horizontal .description p {
-      position: relative;
-      margin: 0;
-      padding-top: 20px;
-      font-size: 0.9em;
-      font-weight: 500;
-      line-height: 1.1em; }
-      .card--horizontal .description p:after {
-        content: "";
-        background: #f0ac06;
-        height: 6px;
-        width: 40px;
-        /*POSITION*/
-        position: absolute;
-        top: 6px;
-        left: 0; }
-    .card--horizontal .description a {
-      color: #d9b310;
-      margin-bottom: 10px;
-      float: right; }
-      .card--horizontal .description a:after {
-        transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        content: "\f061";
-        font-family: FontAwesome;
-        margin-left: -10px;
-        opacity: 0;
-        vertical-align: middle; }
-      .card--horizontal .description a:hover:after {
-        margin-left: 5px;
-        opacity: 1; }
+      top: 6px;
+      left: 0; }
+  .card--horizontal .more {
+    color: #d9b310;
+    float: right; }
+    .card--horizontal .more:after {
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      content: "\f061";
+      font-family: FontAwesome;
+      margin-left: -10px;
+      opacity: 0;
+      vertical-align: middle; }
+    .card--horizontal .more:hover:after {
+      margin-left: 5px;
+      opacity: 1; }
