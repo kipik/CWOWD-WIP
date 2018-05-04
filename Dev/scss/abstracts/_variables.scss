@@ -2,11 +2,12 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 /// Regular font family
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$texte: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 /// Code (monospace) font family
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
+$titre: 'Segoe UI', 'Roboto', Helvetica, Arial, 'Open Sans', sans-serif;
 
 
 $white: #fff;
@@ -62,4 +63,3 @@ $san-juan: #2d4e68;
 $bermuda: #77d7b9;
 $white: #fff;
 $black: #000;
-$open-sans: roboto, 'Open Sans', sans-serif;

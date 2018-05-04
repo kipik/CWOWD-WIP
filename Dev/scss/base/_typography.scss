@@ -3,9 +3,10 @@
  */
 body {
   color: $dark;
-  font: normal 125% / 1.4 $text-font-stack;
+  font: normal 125% / 1.2 $texte;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
 }
-// 
+//
 // h2 {
 //   color: $secondary;
 // }
