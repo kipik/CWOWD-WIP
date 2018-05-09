@@ -449,8 +449,8 @@ a {
  */
 body {
   color: #1d2731;
-  font: normal 125%/1.2 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07); }
+  font: normal 115%/1.2 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.07); }
 
 /**
  * Clear inner floats
@@ -586,59 +586,51 @@ body {
   .desktop-nav__navigation div {
     display: block; } }
 
+.card--horizontal {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  grid-template-rows: 155px 25px;
+  grid-template-areas: "photo description" "hot hot"; }
+  .card--horizontal .photo {
+    grid-area: photo; }
+  .card--horizontal .description {
+    grid-area: description; }
+  .card--horizontal .card-hotness {
+    grid-area: hot; }
+
 /*PEN STYLES*/
 .card--horizontal {
   height: 180px;
   max-width: 400px;
-  transition: height 0.3s ease;
-  -webkit-transition: height 0.3s ease;
   background: #fff;
-  border-radius: 3px;
-  box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2);
-  margin: 0 auto 1.6%;
+  border-radius: 5px;
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.3);
+  margin: 0 auto 2%;
   overflow: hidden;
-  position: relative;
-  font-size: 14px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: grid;
-  grid-template-columns: 35% 65%;
-  grid-template-rows: 155px 25px;
-  grid-gap: 0;
-  grid-template-areas: "photo description" "hotness hotness"; }
-  .card--horizontal::before, .card--horizontal::after {
-    content: '';
-    display: table; }
-  .card--horizontal::after {
-    clear: both; }
+  position: relative; }
   .card--horizontal .photo {
-    grid-area: photo;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     height: 155px;
-    transform: skewX(-10deg);
-    z-index: 0;
     position: absolute;
-    left: -20px; }
+    left: -20px;
+    transform: skewX(-10deg); }
   .card--horizontal .description {
-    grid-area: description;
     transform: skewX(-10deg);
-    padding: 6px 2px 2px 8px;
+    padding: 2px 5px 2px 8px;
     background-color: #fff; }
     .card--horizontal .description h1 {
       font-family: "Segoe UI", "Roboto", Helvetica, Arial, "Open Sans", sans-serif;
-      line-height: 1.2em;
-      margin: 0 0 7px 0;
-      font-size: 1.7em;
+      line-height: 1em;
+      font-size: 1.3em;
       transform: skewX(10deg); }
     .card--horizontal .description h2 {
       color: #9b9b9b;
       font-family: "Segoe UI", "Roboto", Helvetica, Arial, "Open Sans", sans-serif;
-      line-height: 1.2em;
+      line-height: 1em;
       text-transform: uppercase;
-      font-size: 1.1em;
+      font-size: 1em;
       font-weight: 400;
-      margin: 1% 0;
       transform: skewX(10deg); }
     .card--horizontal .description p {
       transform: skewX(10deg);
@@ -646,7 +638,7 @@ body {
       padding-top: 12px;
       font-size: 0.9em;
       font-weight: 400;
-      line-height: 1.2em; }
+      line-height: 1em; }
       .card--horizontal .description p:after {
         content: "";
         background: #f0ac06;
@@ -657,27 +649,14 @@ body {
         position: absolute;
         top: 5px;
         left: -5px; }
-    .card--horizontal .description .more {
-      color: #d9b310;
-      float: right; }
-      .card--horizontal .description .more:after {
-        transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        content: "\f061";
-        font-family: FontAwesome;
-        margin-left: -10px;
-        opacity: 0;
-        vertical-align: middle; }
-      .card--horizontal .description .more:hover:after {
-        margin-left: 5px;
-        opacity: 1; }
   .card--horizontal .card-hotness {
-    grid-area: hotness;
     background-color: #328cc1;
     z-index: 1;
     display: grid;
     grid-template-columns: 35% repeat(3, 1fr);
     align-self: bottom; }
+    .card--horizontal .card-hotness ul {
+      display: flex; }
     .card--horizontal .card-hotness li {
       list-style: none;
       margin: 0;
