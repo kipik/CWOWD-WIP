@@ -4,7 +4,7 @@
   grid-template-rows: 155px 25px;
   grid-template-areas:
   "photo description"
-  "hot hot";
+  "share share";
 
 
   .photo {
@@ -14,10 +14,10 @@
   .description {
     grid-area: description;
   }
-  // .card-date {
-  //   grid-area: date;
-  // }
-  .card-hotness {
-    grid-area: hot;
+  .card-date {
+    grid-area: photo;
+  }
+  .card-sharing {
+    grid-area: share;
   }
 }
