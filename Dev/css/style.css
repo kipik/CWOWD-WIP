@@ -504,3 +504,11 @@ a {
   .container .main-content {
     grid-area: main;
     background-color: yellow; }
+
+.left-side h2 {
+  font-size: 12px;
+  font-weight: 600; }
+
+.avatar-100 {
+  border-radius: 50%;
+  width: 100px; }

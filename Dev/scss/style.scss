@@ -21,12 +21,14 @@
 @import
   'layout/header',
   'layout/grid',
+  'layout/sidebar',
   'layout/footer';
 
 // 5. Components
-// @import
+@import
   // 'modules/button',
-  // 'modules/cards2';
+  // 'modules/cards2',
+  'modules/image';
 
 // 6. Page-specific styles
 @import
