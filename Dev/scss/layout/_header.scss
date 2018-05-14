@@ -1,110 +1,110 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
-
-
-.header {
-  background: $dark;
-  color: $light;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: $h-header;
-  padding: 5px 20px;
-
-  a {
-    color: $light;
-    display: block;
-
-    @include on-event {
-      color: $white;
-      }
-    }
-}
-
-/* hamburger icon */
-.burger {
-  display:flex;
-  align-items: center;
-}
-
-.burger__button {
-  width: 3rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.burger__button:focus {
-  outline: none;
-}
-
-.burger__button-bar {
-  width: 100%;
-  height: 0.2rem;
-  background: $second;
-  display: block;
-  margin: 0.6rem 0;
-}
-
-/* Desktop */
-.desktop-nav__navigation {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.desktop-nav__navigation div {
-  padding-left: 20px;
-  display: none;
-}
-
-/* mobile navigation */
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  background-color: rgba(90, 90, 90, 0.9);
-  width: 80vw;
-  height: 100vh;
-  color: $white;
-  // display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  // display: none;
-  transform: translateX(-100%);
-  transition: transform 400ms ease-out;
-}
-
-.mobile-nav__items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 2rem;
-  a {
-    color: $white;
-
-    @include on-event {
-      color: $accent;
-    }
-  }
-}
-
-
-.open {
-  display: flex;
-  z-index: 10;
-  transform: translateX(0);
-
-}
-
-@media (min-width: 40rem) {
-  .burger__button {
-    display: none;
-  }
-
-  .desktop-nav__navigation div {
-    display: block;
-  }
-}
+// // -----------------------------------------------------------------------------
+// // This file contains all styles related to the header of the site/application.
+// // -----------------------------------------------------------------------------
+//
+//
+// .header {
+//   background: $dark;
+//   color: $light;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   height: $h-header;
+//   padding: 5px 20px;
+//
+//   a {
+//     color: $light;
+//     display: block;
+//
+//     @include on-event {
+//       color: $white;
+//       }
+//     }
+// }
+//
+// /* hamburger icon */
+// .burger {
+//   display:flex;
+//   align-items: center;
+// }
+//
+// .burger__button {
+//   width: 3rem;
+//   background: transparent;
+//   border: none;
+//   cursor: pointer;
+//   padding-top: 0;
+//   padding-bottom: 0;
+// }
+//
+// .burger__button:focus {
+//   outline: none;
+// }
+//
+// .burger__button-bar {
+//   width: 100%;
+//   height: 0.2rem;
+//   background: $second;
+//   display: block;
+//   margin: 0.6rem 0;
+// }
+//
+// /* Desktop */
+// .desktop-nav__navigation {
+//   display: flex;
+//   justify-content: flex-end;
+// }
+//
+// .desktop-nav__navigation div {
+//   padding-left: 20px;
+//   display: none;
+// }
+//
+// /* mobile navigation */
+// .mobile-nav {
+//   position: fixed;
+//   top: 0;
+//   background-color: rgba(90, 90, 90, 0.9);
+//   width: 80vw;
+//   height: 100vh;
+//   color: $white;
+//   // display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   // display: none;
+//   transform: translateX(-100%);
+//   transition: transform 400ms ease-out;
+// }
+//
+// .mobile-nav__items {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   font-size: 2rem;
+//   a {
+//     color: $white;
+//
+//     @include on-event {
+//       color: $accent;
+//     }
+//   }
+// }
+//
+//
+// .open {
+//   display: flex;
+//   z-index: 10;
+//   transform: translateX(0);
+//
+// }
+//
+// @media (min-width: 40rem) {
+//   .burger__button {
+//     display: none;
+//   }
+//
+//   .desktop-nav__navigation div {
+//     display: block;
+//   }
+// }

@@ -1,23 +1,49 @@
-.card--horizontal {
+// .card--horizontal {
+//   display: grid;
+//   grid-template-columns: 3fr 7fr;
+//   grid-template-rows: 155px 25px;
+//   grid-template-areas:
+//   "photo description"
+//   "share share";
+//
+//
+//   .photo {
+//     grid-area: photo;
+//   }
+//
+//   .description {
+//     grid-area: description;
+//   }
+//   .card-date {
+//     grid-area: photo;
+//   }
+//   .card-sharing {
+//     grid-area: share;
+//   }
+// }
+
+.container {
   display: grid;
-  grid-template-columns: 3fr 7fr;
-  grid-template-rows: 155px 25px;
-  grid-template-areas:
-  "photo description"
-  "share share";
+  grid-template-columns: minmax(min-content, 300px) minmax(500px, auto);
+  grid-template-rows:  minmax(min-content, 50px) 1fr;
+  grid-template-areas:  "head head"
+                        "left main";
 
-
-  .photo {
-    grid-area: photo;
+  .en-tete {
+    grid-area: head;
+    background-color: green;
   }
 
-  .description {
-    grid-area: description;
+  .left-side {
+    grid-area: left;
+    background-color: red;
   }
-  .card-date {
-    grid-area: photo;
+
+  .main-content {
+    grid-area: main;
+    background-color: yellow;
+    // height: 100%;
+    // width: 100%;
   }
-  .card-sharing {
-    grid-area: share;
-  }
+
 }
