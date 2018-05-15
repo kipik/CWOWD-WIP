@@ -494,17 +494,30 @@ a {
 .container {
   display: grid;
   grid-template-columns: minmax(min-content, 300px) minmax(500px, auto);
-  grid-template-rows: minmax(min-content, 50px) 1fr;
-  grid-template-areas: "head head" "left main"; }
+  grid-template-rows: minmax(min-content, 50px) auto;
+  grid-template-areas: "head head" "left main";
+  justify-content: center;
+  grid-gap: 1.5rem; }
   .container .en-tete {
     grid-area: head;
     background-color: green; }
   .container .left-side {
-    grid-area: left;
-    background-color: red; }
+    grid-area: left; }
   .container .main-content {
     grid-area: main;
     background-color: yellow; }
+
+.numbers {
+  display: grid;
+  grid-template: 50% 50%;
+  justify-content: stretch;
+  border-bottom: 1px solid; }
+  .numbers .xp-total, .numbers .notifications {
+    padding: 5px 0;
+    text-align: center; }
+  .numbers .notifications {
+    grid-column-start: 2;
+    border-left: 1px solid; }
 
 /*PEN STYLES*/
 .card--horizontal {

@@ -493,22 +493,73 @@ a {
 .container {
   display: grid;
   grid-template-columns: minmax(min-content, 300px) minmax(500px, auto);
-  grid-template-rows: minmax(min-content, 50px) 1fr;
-  grid-template-areas: "head head" "left main"; }
+  grid-template-rows: minmax(min-content, 50px) auto;
+  grid-template-areas: "head head" "left main";
+  justify-content: center;
+  grid-gap: 1.5rem; }
   .container .en-tete {
     grid-area: head;
     background-color: green; }
   .container .left-side {
-    grid-area: left;
-    background-color: red; }
+    grid-area: left; }
   .container .main-content {
     grid-area: main;
     background-color: yellow; }
 
-.left-side h2 {
+.numbers {
+  display: grid;
+  grid-template: 50% 50%;
+  justify-content: stretch;
+  border-bottom: 1px solid; }
+  .numbers .xp-total, .numbers .notifications {
+    padding: 5px 0;
+    text-align: center; }
+  .numbers .notifications {
+    grid-column-start: 2;
+    border-left: 1px solid; }
+
+.left-side {
+  background-color: white;
+  border-radius: 7px; }
+  .left-side h2 {
+    font-size: 15px;
+    font-weight: 600; }
+
+.bio {
+  border-bottom: 1px solid;
+  padding: 5px;
+  text-align: center; }
+
+.name {
+  text-align: center; }
+
+.numbers h3 {
+  margin: 0;
+  padding: 0;
   font-size: 12px;
-  font-weight: 600; }
+  color: blue;
+  text-align: center; }
+
+.numbers .number-big {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center; }
+
+.menu li {
+  list-style: none; }
+
+.menu a {
+  text-decoration: none; }
+
+i {
+  font-size: 1.05em;
+  padding: 0 10px; }
 
 .avatar-100 {
   border-radius: 50%;
   width: 100px; }
+
+body {
+  background-color: grey; }
