@@ -22,7 +22,8 @@
   'layout/header',
   'layout/grid',
   'layout/sidebar',
-  'layout/footer';
+  'layout/footer',
+  'layout/dashboard';
 
 // 5. Components
 @import
@@ -37,7 +38,3 @@
 // 7. Themes
 @import
   'themes/default';
-
-body {
-  background-color: grey;
-}

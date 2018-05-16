@@ -422,9 +422,6 @@ html {
 *::after {
   box-sizing: inherit; }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 5px 0; }
-
 /**
  * Basic styles for links
  */
@@ -434,6 +431,9 @@ a {
   a:hover, a:active, a:focus {
     color: #0b3c5d;
     text-decoration: none; }
+
+body {
+  background-color: #eef5f7; }
 
 /**
  * Basic typography style for copy text
@@ -494,9 +494,10 @@ a {
 .container {
   display: grid;
   grid-template-columns: minmax(min-content, 300px) minmax(500px, auto);
-  grid-template-rows: minmax(min-content, 50px) auto;
-  grid-template-areas: "head head" "left main";
+  grid-template-rows: minmax(min-content, 50px) auto 100px;
+  grid-template-areas: "head head" "left main" "footer footer";
   justify-content: center;
+  align-content: center;
   grid-gap: 1.5rem; }
   .container .en-tete {
     grid-area: head;
@@ -504,20 +505,62 @@ a {
   .container .left-side {
     grid-area: left; }
   .container .main-content {
-    grid-area: main;
-    background-color: yellow; }
+    grid-area: main; }
+  .container .footer {
+    grid-area: footer;
+    background-color: green;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center; }
 
 .numbers {
   display: grid;
-  grid-template: 50% 50%;
-  justify-content: stretch;
-  border-bottom: 1px solid; }
-  .numbers .xp-total, .numbers .notifications {
-    padding: 5px 0;
-    text-align: center; }
+  grid-template: 1fr 1fr; }
   .numbers .notifications {
+    grid-column-start: 2; }
+
+.menu ul li {
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-column-gap: 5%; }
+  .menu ul li i {
+    grid-column-start: 1;
+    justify-self: center;
+    align-self: center; }
+  .menu ul li a {
     grid-column-start: 2;
-    border-left: 1px solid; }
+    align-self: center; }
+
+.bio {
+  display: grid;
+  grid-template: 120px auto auto 10px / 120px 1fr;
+  grid-template-areas: "avatar links" "name   name" "statut pseudo" ".      ."; }
+  .bio .avatar {
+    grid-area: avatar;
+    align-self: center;
+    justify-self: center; }
+  .bio .name {
+    grid-area: name;
+    align-self: center;
+    justify-self: center; }
+  .bio .statut {
+    grid-area: statut;
+    align-self: center;
+    justify-self: center; }
+  .bio .pseudo {
+    grid-area: pseudo;
+    align-self: center;
+    justify-self: center; }
+  .bio .links {
+    grid-area: links;
+    align-self: center;
+    justify-self: start; }
+
+.main-content {
+  display: grid;
+  grid-auto-rows: 200px 1fr;
+  grid-gap: 1.5em;
+  grid-auto-flow: row; }
 
 /*PEN STYLES*/
 .card--horizontal {

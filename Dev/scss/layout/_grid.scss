@@ -25,10 +25,12 @@
 .container {
   display: grid;
   grid-template-columns: minmax(min-content, 300px) minmax(500px, auto);
-  grid-template-rows:  minmax(min-content, 50px) auto;
+  grid-template-rows:  minmax(min-content, 50px) auto 100px;
   grid-template-areas:  "head head"
-                        "left main";
+                        "left main"
+                        "footer footer";
   justify-content: center;
+  align-content: center;
   grid-gap : 1.5rem;
 
   .en-tete {
@@ -37,47 +39,86 @@
   }
   .left-side {
     grid-area: left;
-    // background-color: red;
   }
   .main-content {
     grid-area: main;
-    background-color: yellow;
-    // height: 100%;
-    // width: 100%;
+  }
+  .footer {
+    grid-area: footer;
+    background-color: green;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
   }
 }
 
 .numbers {
   display: grid;
-  grid-template: 50% 50%;
-  justify-content: stretch;
-  // align-content: center;
-  // border-left: 1px solid;
-  // border-right: 1px solid;
-  border-bottom: 1px solid;
-  // align-items: center;
-  // justify-items: center;
-  // grid-auto-flow: column;
-  // border-style: solid;
-  // border-width: 1px;
-
-
-  .xp-total, .notifications {
-    // grid-gap: 1px;
-    // border: 1px solid;
-    padding: 5px 0;
-    text-align: center;
-  }
+  grid-template: 1fr 1fr;
 
   .notifications {
     grid-column-start: 2;
-    // grid-row: 1;
-    border-left: 1px solid;
-    // background-color: red;
-
   }
-  .xp-total {
-    // background-color: green;
-  }
+}
 
+
+.menu {
+  ul {
+    li {
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-column-gap: 5%;
+      i {
+        grid-column-start: 1;
+        justify-self: center;
+        align-self: center;
+      }
+      a {
+        grid-column-start: 2;
+        align-self: center;
+      }
+    }
+  }
+}
+
+.bio{
+  display: grid;
+  grid-template: 120px auto auto 10px / 120px 1fr;
+  grid-template-areas:  "avatar links"
+                        "name   name"
+                        "statut pseudo"
+                        ".      .";
+
+  .avatar {
+    grid-area: avatar;
+    align-self: center;
+    justify-self: center;
+  }
+  .name {
+    grid-area: name;
+    align-self: center;
+    justify-self: center;
+  }
+  .statut {
+    grid-area: statut;
+    align-self: center;
+    justify-self: center;
+  }
+  .pseudo {
+    grid-area: pseudo;
+    align-self: center;
+    justify-self: center;
+  }
+  .links {
+    grid-area: links;
+    align-self: center;
+    justify-self: start;
+  }
+}
+
+.main-content {
+  display: grid;
+  grid-auto-rows: 200px 1fr;
+  grid-gap: 1.5em;
+  grid-auto-flow: row;
 }
