@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login page</title>
   <link rel="stylesheet" href="css/login.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
 </head>
 <body>
@@ -13,19 +14,19 @@
   <div class="login-info-box">
     <h2>Vous disposez d'un compte ?</h2>
     <p>Lorem ipsum dolor sit amet.</p>
-    <label for="" id="label-register">Connexion</label>
+    <label for="log-reg-show" id="label-register">Connexion</label>
     <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
   </div>
 
   <div class="register-info-box">
     <h2>Pas encore de compte ?</h2>
-    <p>Mnulla quidem voluptas iure inventore accusamus.</p>
-    <label for="log-login-show" class="label-login">Créer un compte</label>
-    <input type="radio" class="active-log-panel" id="log-login-show">
+    <p>Lorem ipsum dolor sit amet.</p>
+    <label for="log-login-show" id="label-login">Créer un compte</label>
+    <input type="radio" name="active-log-panel" id="log-login-show">
   </div>
 
   <div class="white-panel">
-    <div class="login-show">
+		<div class="login-show">
       <h2>Connexion</h2>
       <input type="text" placeholder="email">
       <input type="password" placeholder="mot de passe">
@@ -36,9 +37,39 @@
       <h2>Inscription</h2>
       <input type="text" placeholder="email">
       <input type="password" placeholder="mot de passe">
+      <input type="password" placeholder="Confirmez le mot de passe">
       <input type="button" value="Inscription">
     </div>
   </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+    $('.login-info-box').fadeOut();
+    $('.login-show').addClass('show-log-panel');
+});
+
+
+$('.login-reg-panel input[type="radio"]').on('change', function() {
+    if($('#log-login-show').is(':checked')) {
+        $('.register-info-box').fadeOut();
+        $('.login-info-box').fadeIn();
+
+        $('.white-panel').addClass('right-log');
+        $('.register-show').addClass('show-log-panel');
+        $('.login-show').removeClass('show-log-panel');
+
+    }
+    else if($('#log-reg-show').is(':checked')) {
+        $('.register-info-box').fadeIn();
+        $('.login-info-box').fadeOut();
+
+        $('.white-panel').removeClass('right-log');
+
+        $('.login-show').addClass('show-log-panel');
+        $('.register-show').removeClass('show-log-panel');
+    }
+});
+</script>
 </body>
 </html>

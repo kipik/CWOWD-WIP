@@ -7,6 +7,9 @@
  */
 /* Document
    ========================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Mukta");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -403,7 +406,7 @@ template {
   display: none; }
 
 body {
-  font-family: tahoma;
+  font-family: 'Mukta', sans-serif;
   height: 100vh;
   min-height: 550px;
   background-image: url("/assets/img/ks-collection.jpg");
@@ -435,7 +438,7 @@ a {
   position: absolute;
   top: -50px;
   width: 50%;
-  right: calc(50% -50px);
+  right: calc(50% - 50px);
   transition: .3s ease-in-out;
   z-index: 0; }
 
@@ -444,11 +447,11 @@ a {
   display: none; }
 
 .login-reg-panel {
-  color: #b8b8b8; }
+  color: #B8B8B8; }
 
 .login-reg-panel #label-login,
 .login-reg-panel #label-register {
-  border: 1px solid #939393;
+  border: 1px solid #9E9E9E;
   padding: 0 5px;
   width: 150px;
   display: block;
@@ -457,10 +460,10 @@ a {
   cursor: pointer; }
 
 .login-info-box {
-  width: 30px;
+  width: 30%;
   padding: 0 50px;
   top: 20%;
-  right: 0;
+  left: 0;
   position: absolute;
   text-align: left; }
 
@@ -489,8 +492,7 @@ a {
   display: block;
   opacity: 0.9; }
 
-.login-show input[type="text"],
-.login-show input[type="password"] {
+.login-show input[type="text"], .login-show input[type="password"] {
   width: 100%;
   display: block;
   margin: 20px 0;
@@ -514,8 +516,7 @@ a {
   display: inline-block;
   padding: 10px 0; }
 
-.register-show input[type="text"],
-.register-show input[type="password"] {
+.register-show input[type="text"], .register-show input[type="password"] {
   width: 100%;
   display: block;
   margin: 20px 0;
@@ -529,4 +530,8 @@ a {
   background: #444444;
   color: #f9f9f9;
   border: none;
-  padding: 0; }
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  float: right;
+  cursor: pointer; }
