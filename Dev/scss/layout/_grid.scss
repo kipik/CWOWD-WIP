@@ -83,8 +83,9 @@
 
 .bio{
   display: grid;
-  grid-template: 120px auto auto 10px / 120px 1fr;
-  grid-template-areas:  "avatar links"
+  grid-template: 20px 120px auto auto 10px / 120px 1fr;
+  grid-template-areas:  "edit edit"
+                        "avatar links"
                         "name   name"
                         "statut pseudo"
                         ".      .";
@@ -93,6 +94,9 @@
     grid-area: avatar;
     align-self: center;
     justify-self: center;
+  }
+  .link-edit {
+    grid-area: edit;
   }
   .name {
     grid-area: name;
@@ -118,7 +122,18 @@
 
 .main-content {
   display: grid;
-  grid-auto-rows: 200px 1fr;
+  grid-auto-rows: min-content 1fr;
   grid-gap: 1.5em;
   grid-auto-flow: row;
+}
+
+.flash {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+.cards {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1.5em;
 }

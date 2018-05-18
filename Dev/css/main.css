@@ -422,18 +422,23 @@ html {
 *::after {
   box-sizing: inherit; }
 
-/**
- * Basic styles for links
- */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eef5f7;
+  height: 100vh;
+  font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  letter-spacing: -0.5px; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 5px 0; }
+
 a {
   color: #328cc1;
   text-decoration: none; }
   a:hover, a:active, a:focus {
     color: #0b3c5d;
     text-decoration: none; }
-
-body {
-  background-color: #eef5f7; }
 
 /**
  * Basic typography style for copy text
@@ -533,12 +538,14 @@ body {
 
 .bio {
   display: grid;
-  grid-template: 120px auto auto 10px / 120px 1fr;
-  grid-template-areas: "avatar links" "name   name" "statut pseudo" ".      ."; }
+  grid-template: 20px 120px auto auto 10px / 120px 1fr;
+  grid-template-areas: "edit edit" "avatar links" "name   name" "statut pseudo" ".      ."; }
   .bio .avatar {
     grid-area: avatar;
     align-self: center;
     justify-self: center; }
+  .bio .link-edit {
+    grid-area: edit; }
   .bio .name {
     grid-area: name;
     align-self: center;
@@ -558,9 +565,18 @@ body {
 
 .main-content {
   display: grid;
-  grid-auto-rows: 200px 1fr;
+  grid-auto-rows: min-content 1fr;
   grid-gap: 1.5em;
   grid-auto-flow: row; }
+
+.flash {
+  display: grid;
+  grid-template-rows: min-content 1fr; }
+
+.cards {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1.5em; }
 
 /*PEN STYLES*/
 .card--horizontal {

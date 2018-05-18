@@ -25,6 +25,17 @@
   }
 }
 
+.link-edit {
+  text-align: right;
+  padding: 10px;
+  font-size: 10px;
+  font-weight: 800;
+
+  a {
+  color: $third !important;
+  }
+}
+
 .name {
   text-align: center;
 }
