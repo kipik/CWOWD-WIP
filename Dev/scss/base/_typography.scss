@@ -10,3 +10,15 @@
 // h2 {
 //   color: $secondary;
 // }
+
+body {
+  font-family: $texte;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $titre;
+}
+
+a {
+  text-decoration: none;
+}

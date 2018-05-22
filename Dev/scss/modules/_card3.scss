@@ -1,0 +1,89 @@
+.card-covered {
+position: relative;
+// float: left;
+margin: 5px 10px;
+// min-width: 115px;
+// max-width: 250px;
+height: 240px;
+width: 100%;
+color: $white;
+text-align: right;
+line-height: 1.1rem;
+background-color: $white;
+font-size: 12px;
+overflow: hidden;
+
+    * {
+    box-sizing: border-box;
+    transition: all 0.35s ease;
+    }
+
+    img {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    opacity: 1;
+    // max-height: 250px;
+    max-width: 100%;
+    height: auto;
+    transform: translate(50%, -50%);
+    // object-fit: cover;
+    }
+
+    figcaption {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 10px 0 10px 10px;
+    }
+
+    h2, p {
+    margin: 0;
+    width: 100%;
+    transform: translateX(20px);
+    opacity: 0;
+    }
+
+    h2 {
+    font-family: $titre;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    }
+
+    p {
+    font-size: 0.9rem;
+    font-weight: 100;
+    }
+
+    a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    }
+
+    &:hover {
+        background-color: $dark;
+        overflow: inherit;
+        img {
+        width: 50%;
+        right: 18%;
+        }
+        // .hover img {
+        // width: 55%;
+        // right: -10%;
+        // }
+        figcaption h2 {
+        transform: translateX(0px);
+        opacity: 1;
+        }
+        figcaption p {
+        transform: translateX(0px);
+        opacity: 1;
+        }
+    }
+}

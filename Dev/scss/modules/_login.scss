@@ -1,5 +1,5 @@
 body {
-  font-family: 'Mukta', sans-serif;
+  // font-family: $texte;
 	height: 100vh;
 	min-height: 550px;
   background-image: url("/assets/img/ks-collection.jpg");
@@ -10,10 +10,6 @@ body {
     overflow-y: hidden;
   }
 
-a {
-text-decoration: none;
-color: #444444;
-}
 .login-reg-panel {
   position: relative;
   top: 50%;
