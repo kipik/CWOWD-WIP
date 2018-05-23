@@ -410,13 +410,11 @@ template {
  * Basic typography style for copy text
  */
 body {
-  font-family: "Mukta", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Mukta", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  letter-spacing: -0.5px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Segoe UI", "Roboto", Helvetica, Arial, "Open Sans", sans-serif; }
-
-a {
-  text-decoration: none; }
 
 body {
   height: 100vh;

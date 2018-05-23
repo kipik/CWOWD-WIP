@@ -1,9 +1,6 @@
 .card-covered {
 position: relative;
-// float: left;
 margin: 5px 10px;
-// min-width: 115px;
-// max-width: 250px;
 height: 240px;
 width: 100%;
 color: $white;
@@ -23,11 +20,10 @@ overflow: hidden;
     right: 50%;
     top: 50%;
     opacity: 1;
-    // max-height: 250px;
-    max-width: 100%;
+    max-width: 250px;
+    max-height: 250px;
     height: auto;
     transform: translate(50%, -50%);
-    // object-fit: cover;
     }
 
     figcaption {
@@ -73,17 +69,15 @@ overflow: hidden;
         width: 50%;
         right: 18%;
         }
-        // .hover img {
-        // width: 55%;
-        // right: -10%;
-        // }
-        figcaption h2 {
-        transform: translateX(0px);
-        opacity: 1;
-        }
-        figcaption p {
-        transform: translateX(0px);
-        opacity: 1;
+        figcaption {
+            h2 {
+            transform: translateX(0px);
+            opacity: 1;
+            }
+            p {
+            transform: translateX(0px);
+            opacity: 1;
+            }
         }
     }
 }

@@ -427,9 +427,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #eef5f7;
-  height: 100vh;
-  font-family: "Mukta", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  letter-spacing: -0.5px; }
+  height: 100vh; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 5px 0; }
@@ -445,13 +443,11 @@ a {
  * Basic typography style for copy text
  */
 body {
-  font-family: "Mukta", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Mukta", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  letter-spacing: -0.5px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Segoe UI", "Roboto", Helvetica, Arial, "Open Sans", sans-serif; }
-
-a {
-  text-decoration: none; }
 
 /**
  * Clear inner floats
