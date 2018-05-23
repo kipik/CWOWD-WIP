@@ -1,0 +1,58 @@
+@media only screen and (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+}
+
+.header {
+    grid-area: head;
+    background-color: green;
+    height: 45px;
+    width: 100%;
+    padding: 10px;
+    z-index: 3;
+ }
+
+ .top-nav {
+      float: right;
+      padding: 0 30px;
+      display: none;
+
+      ul {
+     list-style: none;
+     }
+  }
+
+.left-side {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+    .menu ul li span:first-child {
+        font-size: 24px;
+        color: #999;
+    }
+    .menu  ul li span:nth-child(2) {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .menu  ul li {
+        border: none;
+    }
+    .menu  ul li span:nth-child(2) {
+        // font-size: 14px;
+        visibility: visible;
+    }
+}
