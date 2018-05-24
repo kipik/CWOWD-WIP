@@ -526,6 +526,25 @@ input[type=text]:focus {
   background-color: #eef5f7;
   padding: 0;
   margin: 0;
-  border-radius: 50%; }
-  .avatar .avatar-100 {
-    width: 100px; }
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  justify-self: center; }
+  .avatar img {
+    width: 40px;
+    height: 40px; }
+  @media only screen and (min-width: 768px) {
+    .avatar {
+      width: 50px;
+      height: 50px; }
+      .avatar img {
+        width: 50px;
+        height: 50px; } }
+  @media only screen and (min-width: 1170px) {
+    .avatar {
+      width: 80px;
+      height: 80px; }
+      .avatar img {
+        width: 60px;
+        height: 60px; } }

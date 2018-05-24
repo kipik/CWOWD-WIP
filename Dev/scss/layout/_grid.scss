@@ -24,23 +24,26 @@
 
 .container {
   display: grid;
-  grid-template-columns: minmax(min-content, 300px) minmax(400px, auto);
+  grid-template-columns: auto;
   grid-template-rows:  minmax(min-content, 45px) auto 100px;
-  grid-template-areas:  "head head"
-                        "main main"
-                        "footer footer";
+  grid-template-areas:  "head"
+                        "main"
+                        "footer";
   justify-content: center;
   align-content: center;
   grid-gap : 1.5rem;
 
-    .left-side {
-      display: none;
+    .header {
+      grid-area: head;
+      background-color: green;
+      height: 45px;
+      width: 100%;
+      padding: 10px;
+      z-index: 3;
     }
-
     .main-content {
       grid-area: main;
     }
-
     .footer {
       grid-area: footer;
       background-color: green;
@@ -50,89 +53,184 @@
     }
 
     @media only screen and (min-width: 768px) {
+    grid-template-columns: minmax(min-content, 80px) auto;
+    justify-content: center;
+    align-content: center;
+    grid-gap : 1rem;
     grid-template-areas:  "left head"
                           "left main"
-                          "footer footer";
+                          "left footer";
 
-    .left-side {
-      display: flex;
-      flex-direction: column;
+      .left-nav {
       grid-area: left;
-      // height: 100vh;
-      // @media only screen and (max-width: 768px) {
-      // display: none;
-      // }
-    }
-  }
-}
-
-.numbers {
-  display: grid;
-  grid-template: 1fr 1fr;
-
-  .notifications {
-    grid-column-start: 2;
-  }
-}
-
-
-.menu {
-  ul {
-    li {
-    display: grid;
-    grid-template-columns: 25% auto;
-    grid-column-gap: 5%;
-      i {
-        grid-column-start: 1;
-        justify-self: center;
-        align-self: center;
+      display: grid;
+      // justify-items: center;
+      // align-items: center;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas:  "avatar"
+                            "xp"
+                            "notif"
+                            "menu"
+                            "alerte";
       }
-      a {
-        grid-column-start: 2;
-        align-self: center;
+      .alerte {
+        display: none;
+      }
+      .avatar {
+        grid-area: avatar;
+      }
+      .xp-total {
+        grid-area: xp;
+      }
+      .notifications {
+        grid-area: notif;
+      }
+      .menu {
+        grid-area: menu;
+        .lien {
+          display: none;
+        }
       }
     }
-  }
+
+
+    @media only screen and (min-width: 1170px){
+      grid-template-columns: 1fr 5fr;
+      grid-template-areas:  "head head"
+                            "gauche main"
+                            "footer footer";
+      .left-nav {
+      grid-area: gauche;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(min-content, 50px));
+      grid-template-rows: repeat(7, auto);
+      grid-template-areas:  "edit   edit     edit   edit"
+                            "avatar links    links  links"
+                            "name   name     name   name"
+                            "statut statut   pseudo pseudo"
+                            "xp     xp       notif  notif"
+                            "menu   menu     menu   menu"
+                            "alerte alerte   alerte alerte";}
+
+      .link-edit {
+        display: inherit;
+        grid-area: edit;
+      }
+      .avatar {
+        grid-area: avatar;
+      }
+      .links {
+        display: inherit;
+        grid-area: links;
+      }
+      .name {
+        display: inherit;
+        grid-area: name;
+      }
+      .statut {
+        display: inherit;
+        grid-area: statut;
+      }
+      .pseudo {
+        display: inherit;
+        grid-area: pseudo;
+      }
+      .xp-total {
+        grid-area: xp;
+      }
+      .notifications {
+        grid-area: notif;
+      }
+      .menu {
+        grid-area: menu;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto;
+        align-items: center;
+        justify-items: center;
+        .icone {
+          grid-column: 1 / 2;
+        }
+        .lien {
+          display: inherit;
+          grid-column: 2 / 3;
+        }
+      }
+      .alerte {
+        display: inherit;
+        grid-area: alerte;
+      }
+}
 }
 
-.bio{
-  display: grid;
-  grid-template: 20px 120px auto auto 10px / 120px 1fr;
-  grid-template-areas:  "edit edit"
-                        "avatar links"
-                        "name   name"
-                        "statut pseudo"
-                        ".      .";
+// .numbers {
+//   display: grid;
+//   grid-template: 1fr 1fr;
+//
+//   .notifications {
+//     grid-column-start: 2;
+//   }
+// }
 
-  .avatar {
-    grid-area: avatar;
-    align-self: center;
-    justify-self: center;
-  }
-  .link-edit {
-    grid-area: edit;
-  }
-  .name {
-    grid-area: name;
-    align-self: center;
-    justify-self: center;
-  }
-  .statut {
-    grid-area: statut;
-    align-self: center;
-    justify-self: center;
-  }
-  .pseudo {
-    grid-area: pseudo;
-    align-self: center;
-    justify-self: center;
-  }
-  .links {
-    grid-area: links;
-    align-self: center;
-    justify-self: start;
-  }
-}
+
+// .menu {
+//   ul {
+//     li {
+//     display: grid;
+//     grid-template-columns: 25% auto;
+//     grid-column-gap: 5%;
+//       i {
+//         grid-column-start: 1;
+//         justify-self: center;
+//         align-self: center;
+//       }
+//       a {
+//         grid-column-start: 2;
+//         align-self: center;
+//       }
+//     }
+//   }
+// }
+
+// .bio{
+//   display: grid;
+//   grid-template: 20px 120px auto auto 10px / 120px 1fr;
+//   grid-template-areas:  "edit edit"
+//                         "avatar links"
+//                         "name   name"
+//                         "statut pseudo"
+//                         ".      .";
+//
+//   .avatar {
+//     grid-area: avatar;
+//     align-self: center;
+//     justify-self: center;
+//   }
+//   .link-edit {
+//     grid-area: edit;
+//   }
+//   .name {
+//     grid-area: name;
+//     align-self: center;
+//     justify-self: center;
+//   }
+//   .statut {
+//     grid-area: statut;
+//     align-self: center;
+//     justify-self: center;
+//   }
+//   .pseudo {
+//     grid-area: pseudo;
+//     align-self: center;
+//     justify-self: center;
+//   }
+//   .links {
+//     grid-area: links;
+//     align-self: center;
+//     justify-self: start;
+//   }
+// }
 
 .main-content {
   display: grid;
