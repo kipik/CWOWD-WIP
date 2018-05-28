@@ -1,71 +1,3 @@
-
-.numbers {
-  border-bottom: 1px solid $light;
-
-  .xp-total, .notifications {
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .notifications {
-    border-left: 1px solid $light;
-  }
-
-  h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    color: blue;
-    text-align: center;
-  }
-  .number-big {
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    font-weight: 800;
-    opacity: 0.7;
-    text-align: center;
-  }
-}
-
- .menu {
-   padding:0;
-   margin:0;
-//   padding: 10px 0;
-//   margin: 0;
-//   width: 100%;
-//   ul {
-//     padding: 0;
-//     margin: 0;
-//     width: 100%;
-//   }
- }
-
-.left-menu {
-      // padding: 15px 0 0 25px;
-      list-style: none;
-      line-height: 1.6em;
-      a {
-        text-decoration: none;
-        font-size: 1.05em;
-        color: black;
-        opacity: 0.75;
-        }
-      i {
-        font-size: 1.6em;
-        font-weight: 400;
-        color: black;
-        opacity: 0.75;
-      }
-
-      & .active {
-        color: red;
-        opacity: 0.8;
-      }
-          }
-
-
-
 .alerte {
   background-color: $base-up;
   margin: 15px;
@@ -74,10 +6,10 @@
   text-align: justify;
   font-size: 0.8em;
 
-  h4{
+  h4 {
     text-align: center;
     color: $third;
     font-size: 1.1em;
-    padding-bottom: 5px;
+    // padding-bottom: 5px;
   }
 }

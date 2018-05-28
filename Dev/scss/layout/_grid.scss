@@ -1,78 +1,42 @@
-// .card--horizontal {
-//   display: grid;
-//   grid-template-columns: 3fr 7fr;
-//   grid-template-rows: 155px 25px;
-//   grid-template-areas:
-//   "photo description"
-//   "share share";
-//
-//
-//   .photo {
-//     grid-area: photo;
-//   }
-//
-//   .description {
-//     grid-area: description;
-//   }
-//   .card-date {
-//     grid-area: photo;
-//   }
-//   .card-sharing {
-//     grid-area: share;
-//   }
-// }
-
 .container {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows:  minmax(min-content, 45px) auto 100px;
+  grid-template: minmax(min-content, 45px) auto 100px;
   grid-template-areas:  "head"
                         "main"
                         "footer";
+  grid-gap : 1rem;
   justify-content: center;
-  align-content: center;
-  grid-gap : 1.5rem;
 
     .header {
       grid-area: head;
-      background-color: green;
-      height: 45px;
-      width: 100%;
-      padding: 10px;
-      z-index: 3;
-    }
+      }
     .main-content {
       grid-area: main;
     }
     .footer {
       grid-area: footer;
-      background-color: green;
-      border-radius: 10px;
-      text-align: center;
-      align-items: center;
     }
 
     @media only screen and (min-width: 768px) {
-    grid-template-columns: minmax(min-content, 80px) auto;
+    grid-template-columns: minmax(min-content, 90px) auto;
     justify-content: center;
-    align-content: center;
+    // align-content: center;
     grid-gap : 1rem;
-    grid-template-areas:  "left head"
+    grid-template-areas:  "left main"
                           "left main"
-                          "left footer";
+                          "footer footer";
 
       .left-nav {
       grid-area: left;
       display: grid;
-      // justify-items: center;
-      // align-items: center;
-      grid-template-columns: auto;
-      grid-template-rows: repeat(5, auto);
+      grid-template-rows: 60px repeat(2, 3.5rem) auto;
       grid-template-areas:  "avatar"
                             "xp"
                             "notif"
-                            "menu"
-                            "alerte";
+                            "menu";
+      align-content: start;
+      justify-content: center;
+      align-items: center;
       }
       .alerte {
         display: none;
@@ -82,15 +46,15 @@
       }
       .xp-total {
         grid-area: xp;
+
       }
       .notifications {
         grid-area: notif;
       }
       .menu {
         grid-area: menu;
-        .lien {
-          display: none;
-        }
+        display: grid;
+        grid-template-rows: repeat(8, 2.5rem);
       }
     }
 
@@ -249,3 +213,28 @@
   grid-auto-flow: column;
   grid-gap: 1.5em;
 }
+
+
+// .card--horizontal {
+//   display: grid;
+//   grid-template-columns: 3fr 7fr;
+//   grid-template-rows: 155px 25px;
+//   grid-template-areas:
+//   "photo description"
+//   "share share";
+//
+//
+//   .photo {
+//     grid-area: photo;
+//   }
+//
+//   .description {
+//     grid-area: description;
+//   }
+//   .card-date {
+//     grid-area: photo;
+//   }
+//   .card-sharing {
+//     grid-area: share;
+//   }
+// }

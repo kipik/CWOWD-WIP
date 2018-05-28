@@ -8,8 +8,7 @@
 /* Document
    ========================================================================== */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
-@import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
-@import url(https://use.fontawesome.com/releases/v5.0.13/css/solid.css);
+@import url(https://use.fontawesome.com/6e0bc3ba14.css);
 @import url(https://fonts.googleapis.com/css?family=Mukta);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700);
 html {
@@ -440,6 +439,9 @@ a {
     color: #0b3c5d;
     text-decoration: none; }
 
+.container {
+  padding-bottom: 1rem; }
+
 /**
  * Basic typography style for copy text
  */
@@ -505,40 +507,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: minmax(min-content, 45px) auto 100px;
+  grid-template: minmax(min-content, 45px) auto 100px;
   grid-template-areas: "head" "main" "footer";
-  justify-content: center;
-  align-content: center;
-  grid-gap: 1.5rem; }
+  grid-gap: 1rem;
+  justify-content: center; }
   .container .header {
-    grid-area: head;
-    background-color: green;
-    height: 45px;
-    width: 100%;
-    padding: 10px;
-    z-index: 3; }
+    grid-area: head; }
   .container .main-content {
     grid-area: main; }
   .container .footer {
-    grid-area: footer;
-    background-color: green;
-    border-radius: 10px;
-    text-align: center;
-    align-items: center; }
+    grid-area: footer; }
   @media only screen and (min-width: 768px) {
     .container {
-      grid-template-columns: minmax(min-content, 80px) auto;
+      grid-template-columns: minmax(min-content, 90px) auto;
       justify-content: center;
-      align-content: center;
       grid-gap: 1rem;
-      grid-template-areas: "left head" "left main" "left footer"; }
+      grid-template-areas: "left main" "left main" "footer footer"; }
       .container .left-nav {
         grid-area: left;
         display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(5, auto);
-        grid-template-areas: "avatar" "xp" "notif" "menu" "alerte"; }
+        grid-template-rows: 60px repeat(2, 3.5rem) auto;
+        grid-template-areas: "avatar" "xp" "notif" "menu";
+        align-content: start;
+        justify-content: center;
+        align-items: center; }
       .container .alerte {
         display: none; }
       .container .avatar {
@@ -548,9 +540,9 @@ h1, h2, h3, h4, h5, h6 {
       .container .notifications {
         grid-area: notif; }
       .container .menu {
-        grid-area: menu; }
-        .container .menu .lien {
-          display: none; } }
+        grid-area: menu;
+        display: grid;
+        grid-template-rows: repeat(8, 2.5rem); } }
   @media only screen and (min-width: 1170px) {
     .container {
       grid-template-columns: 1fr 5fr;
