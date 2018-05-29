@@ -512,7 +512,13 @@ h1, h2, h3, h4, h5, h6 {
   grid-gap: 1rem;
   justify-content: center; }
   .container .header {
-    grid-area: head; }
+    grid-area: head;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); }
+    .container .header .onglets {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5px; }
   .container .main-content {
     grid-area: main; }
   .container .footer {

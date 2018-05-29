@@ -1,13 +1,44 @@
-// .main-content {
-//   border-radius: 20px;
-// }
-
 .header {
-  background-color: #252d2f;
-  height: 45px;
+  // background-color: $black;
+  // opacity: 0.1;
+  height: 50px;
   width: 100%;
-  padding: 10px;
+  // padding: 10px;
   z-index: 3;
+  margin: 0;
+  padding: 0;
+  a {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+  nav {
+    margin: 0;
+    padding: 0;
+    height: 1.5rem;
+  }
+
+  .onglets {
+    .onglet {
+      background-color: $light-grey;
+      opacity: 0.8;
+      text-align: center;
+    }
+    .active {
+      border-bottom: 1px solid $white;
+      background-color: $white;
+    }
+    a {
+      display: block;
+      color: $black;
+      opacity: .7;
+      padding : 4px 0;
+
+      &:hover {
+        background : $light;
+      }
+    }
+  }
 }
 
 .flash {

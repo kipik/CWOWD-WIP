@@ -9,6 +9,14 @@
 
     .header {
       grid-area: head;
+      display: grid;
+      grid-template-rows: repeat(2,1fr);
+      .onglets {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        // justify-items: center;
+        grid-gap: 5px;
+      }
       }
     .main-content {
       grid-area: main;
@@ -129,73 +137,6 @@
 }
 }
 
-// .numbers {
-//   display: grid;
-//   grid-template: 1fr 1fr;
-//
-//   .notifications {
-//     grid-column-start: 2;
-//   }
-// }
-
-
-// .menu {
-//   ul {
-//     li {
-//     display: grid;
-//     grid-template-columns: 25% auto;
-//     grid-column-gap: 5%;
-//       i {
-//         grid-column-start: 1;
-//         justify-self: center;
-//         align-self: center;
-//       }
-//       a {
-//         grid-column-start: 2;
-//         align-self: center;
-//       }
-//     }
-//   }
-// }
-
-// .bio{
-//   display: grid;
-//   grid-template: 20px 120px auto auto 10px / 120px 1fr;
-//   grid-template-areas:  "edit edit"
-//                         "avatar links"
-//                         "name   name"
-//                         "statut pseudo"
-//                         ".      .";
-//
-//   .avatar {
-//     grid-area: avatar;
-//     align-self: center;
-//     justify-self: center;
-//   }
-//   .link-edit {
-//     grid-area: edit;
-//   }
-//   .name {
-//     grid-area: name;
-//     align-self: center;
-//     justify-self: center;
-//   }
-//   .statut {
-//     grid-area: statut;
-//     align-self: center;
-//     justify-self: center;
-//   }
-//   .pseudo {
-//     grid-area: pseudo;
-//     align-self: center;
-//     justify-self: center;
-//   }
-//   .links {
-//     grid-area: links;
-//     align-self: center;
-//     justify-self: start;
-//   }
-// }
 
 .main-content {
   display: grid;
