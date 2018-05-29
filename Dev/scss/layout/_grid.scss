@@ -29,7 +29,7 @@
       .left-nav {
       grid-area: left;
       display: grid;
-      grid-template-rows: 60px repeat(2, 3.5rem) auto;
+      grid-template-rows: 100px repeat(2, 3.5rem) auto;
       grid-template-areas:  "avatar"
                             "xp"
                             "notif"
@@ -46,7 +46,6 @@
       }
       .xp-total {
         grid-area: xp;
-
       }
       .notifications {
         grid-area: notif;
@@ -54,7 +53,7 @@
       .menu {
         grid-area: menu;
         display: grid;
-        grid-template-rows: repeat(8, 2.5rem);
+        grid-template-rows: repeat(8, 3rem);
       }
     }
 
@@ -70,7 +69,7 @@
       grid-template-columns: repeat(4, minmax(min-content, 50px));
       grid-template-rows: repeat(7, auto);
       grid-template-areas:  "edit   edit     edit   edit"
-                            "avatar links    links  links"
+                            "avatar avatar    links  links"
                             "name   name     name   name"
                             "statut statut   pseudo pseudo"
                             "xp     xp       notif  notif"
@@ -109,10 +108,12 @@
       .menu {
         grid-area: menu;
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr auto;
         grid-template-rows: auto;
+        // grid-auto-flow: column;
         align-items: center;
-        justify-items: center;
+        justify-items: start;
+        grid-gap: 0.5rem;
         .icone {
           grid-column: 1 / 2;
         }
