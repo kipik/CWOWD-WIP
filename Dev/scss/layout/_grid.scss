@@ -63,6 +63,9 @@
         display: grid;
         grid-template-rows: repeat(8, 3rem);
       }
+      .header {
+        display: none;
+      }
     }
 
 

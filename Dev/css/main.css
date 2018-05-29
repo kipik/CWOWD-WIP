@@ -548,7 +548,9 @@ h1, h2, h3, h4, h5, h6 {
       .container .menu {
         grid-area: menu;
         display: grid;
-        grid-template-rows: repeat(8, 3rem); } }
+        grid-template-rows: repeat(8, 3rem); }
+      .container .header {
+        display: none; } }
   @media only screen and (min-width: 1170px) {
     .container {
       grid-template-columns: 1fr 5fr;
