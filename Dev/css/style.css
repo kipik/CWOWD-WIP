@@ -508,34 +508,48 @@ h1, h2, h3, h4, h5, h6 {
   display: none; }
 
 .header {
-  background-color: #000; }
+  background-color: red; }
   .header .top-nav {
-    margin: 0;
     height: 50px;
-    color: #fff; }
+    color: #fff;
+    line-height: 50px;
+    text-align: center; }
     .header .top-nav h1 {
       font-size: 30px;
-      text-align: center;
-      font-weight: 900;
-      padding: 10px 0; }
-  .header .onglet {
-    border-top: 1px solid #ddd;
-    background-color: #eee;
-    text-align: center;
-    width: 100%;
-    height: 30px;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
-    cursor: pointer; }
-    .header .onglet a {
-      display: block;
-      color: #000;
-      opacity: .7;
-      font-weight: 600;
-      line-height: 30px; }
-      .header .onglet a:hover {
-        background: #c8c8c8; }
-  .header .active {
-    background-color: #fff; }
+      font-weight: 800;
+      padding: 0;
+      margin: 0; }
+    .header .top-nav h5 {
+      padding: 0;
+      margin: 0; }
+    .header .top-nav .search {
+      background-color: #000;
+      transform: skewX(-25deg);
+      overflow: hidden;
+      margin-right: -20px;
+      line-height: 51px; }
+      .header .top-nav .search h5 {
+        transform: skewX(20deg); }
+
+.onglet {
+  border-top: 1px solid #ddd;
+  background-color: #eee;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer; }
+  .onglet a {
+    display: block;
+    color: #000;
+    opacity: .7;
+    font-weight: 600;
+    line-height: 30px; }
+    .onglet a:hover {
+      background: #c8c8c8; }
+
+.actif {
+  background-color: #fff; }
 
 @media only screen and (min-width: 768px) {
   .top-nav {
@@ -686,7 +700,15 @@ body {
     grid-template-columns: repeat(3, 1fr); }
     body .header .top-nav {
       grid-row: 1 / 1;
-      grid-column: 1 / 4; }
+      grid-column: 1 / 4;
+      display: grid;
+      grid-template-columns: 1fr 3fr 2fr;
+      grid-template-areas: "fly titre search";
+      align-content: center; }
+      body .header .top-nav .fly {
+        grid-area: fly; }
+      body .header .top-nav .header--titre {
+        grid-area: titre; }
   body .flash {
     grid-area: flash; }
   body .projets {

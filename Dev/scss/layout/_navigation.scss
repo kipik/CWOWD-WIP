@@ -2,20 +2,38 @@
   display: none;
   }
 .header {
-  background-color: $black;
-  // height: 80px;
+  background-color: red;
   .top-nav {
-    margin: 0;
     height: 50px;
     color: $white;
+    line-height: 50px;
+    text-align: center;
 
     h1 {
       font-size: 30px;
-      text-align: center;
-      font-weight: 900;
-      padding: 10px 0;
+      font-weight: 800;
+      padding :0;
+      margin: 0;
     }
+
+      h5 {
+        padding: 0;
+        margin: 0;
+      }
+
+    .search {
+      background-color: $black;
+    	transform: skewX(-25deg);
+      overflow: hidden;
+      margin-right: -20px;
+      line-height: 51px;
+
+      h5 {
+        transform: skewX(20deg);
+      }
     }
+  }
+}
 
   .onglet {
     border-top: 1px solid #ddd;
@@ -44,11 +62,11 @@
     }
   }
 
-    .active {
+    .actif {
       // border-bottom: 1px solid $white;
       background-color: $white;
     }
-  }
+
 
 @media only screen and (min-width: 768px) {
   .top-nav {

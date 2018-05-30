@@ -17,6 +17,18 @@ body {
       .top-nav {
         grid-row: 1 / 1;
         grid-column: 1 / 4;
+        display: grid;
+        grid-template-columns: 1fr 3fr 2fr;
+        grid-template-areas: "fly titre search";
+        align-content: center;
+
+        .fly {
+          grid-area: fly;
+        }
+        .header--titre {
+          grid-area: titre;
+          	// transform: skewX(-20deg);
+        }
       }
     }
     .flash {
