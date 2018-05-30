@@ -1,16 +1,54 @@
- .top-nav {
-      float: right;
-      padding: 0 30px;
-
-      ul {
-     list-style: none;
-     }
-  }
-
 .left-nav {
   display: none;
   }
+.header {
+  background-color: $black;
+  // height: 80px;
+  .top-nav {
+    margin: 0;
+    height: 50px;
+    color: $white;
 
+    h1 {
+      font-size: 30px;
+      text-align: center;
+      font-weight: 900;
+      padding: 10px 0;
+    }
+    }
+
+  .onglet {
+    border-top: 1px solid #ddd;
+    background-color: #eee;
+    text-align: center;
+    // display: block;
+
+    width: 100%;
+    height: 30px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
+    cursor: pointer;
+    // align-self: center;
+
+    a {
+      display: block;
+      color: $black;
+      opacity: .7;
+      font-weight: 600;
+      line-height: 30px;
+
+      // padding : 9px 0;
+
+      &:hover {
+        background : $light;
+      }
+    }
+  }
+
+    .active {
+      // border-bottom: 1px solid $white;
+      background-color: $white;
+    }
+  }
 
 @media only screen and (min-width: 768px) {
   .top-nav {
@@ -58,6 +96,7 @@
         opacity: 0.7;
         color: $white;
         margin: 0;
+        padding : 5px 0;
         &:hover {
           opacity: 0.9;
         }
@@ -89,15 +128,20 @@
 
 
 @media only screen and (min-width: 1170px) {
+  .header {
+    display: none;
+  }
   .left-nav {
     background-color: $white;
     border-radius: 10px;
     padding: .5rem 0;
+
     .link-edit {
+      justify-self: end;
+
       a {
         font-size: 0.7rem;
         font-weight: 600;
-        justify-self: end;
         padding: 5px 10px 0 0;
         color: $third;
       }
@@ -144,11 +188,12 @@
         font-weight: 500;
         color: $base;
         text-align: center;
+        padding-bottom: 5px;
       }
 
       .number-big {
         margin: 0;
-        padding-top: 2px;
+        padding-top: 3px;
         font-size: 1.4rem;
         font-weight: 600;
         opacity: 0.7;
