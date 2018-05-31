@@ -521,13 +521,15 @@ body {
       grid-row: 1 / 1;
       grid-column: 1 / 4;
       display: grid;
-      grid-template-columns: 1fr 3fr 2fr;
-      grid-template-areas: "fly titre search";
-      align-content: center; }
+      grid-template-columns: 100px 3fr 1fr;
+      grid-template-areas: "hamburger titre search";
+      align-items: center; }
       body .header .top-nav .fly {
-        grid-area: fly; }
+        grid-area: hamburger; }
       body .header .top-nav .header--titre {
         grid-area: titre; }
+      body .header .top-nav .search {
+        grid-area: search; }
   body .flash {
     grid-area: flash; }
   body .projets {
@@ -575,8 +577,8 @@ body {
         grid-area: gauche;
         display: grid;
         grid-template-columns: repeat(4, minmax(min-content, 50px));
-        grid-template-rows: repeat(7, auto);
-        grid-template-areas: "edit   edit     edit   edit" "avatar avatar   links  links" "name   name     name   name" "statut statut   pseudo pseudo" "xp     xp       notif  notif" "menu   menu     menu   menu" "alerte alerte   alerte alerte"; }
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: "edit   edit     edit   edit" "avatar avatar   links  links" "name   name     name   name" "xp     xp       notif  notif" "menu   menu     menu   menu" "alerte alerte   alerte alerte"; }
         body .left-nav .link-edit {
           display: block;
           grid-area: edit; }
@@ -588,12 +590,6 @@ body {
         body .left-nav .name {
           display: inherit;
           grid-area: name; }
-        body .left-nav .statut {
-          display: inherit;
-          grid-area: statut; }
-        body .left-nav .pseudo {
-          display: inherit;
-          grid-area: pseudo; }
         body .left-nav .xp-total {
           grid-area: xp; }
         body .left-nav .notifications {
@@ -623,6 +619,25 @@ body {
   display: grid;
   grid-auto-flow: column;
   grid-gap: 1.5em; }
+
+btn-medium {
+  color: #808080;
+  border: 1px solid #808080;
+  border-radius: 50px;
+  padding: 10px 15px;
+  font-weight: lighter;
+  opacity: 0.6; }
+  btn-medium:hover {
+    opacity: 1; }
+
+btn-twitter {
+  color: white;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-weight: bolder;
+  background-color: red; }
+  btn-twitter:hover {
+    background-color: darker-red; }
 
 /*PEN STYLES*/
 .card--horizontal {

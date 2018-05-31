@@ -2,12 +2,42 @@
   display: none;
   }
 .header {
-  background-color: red;
+  // height: 80px;
+  width: 100%;
+  overflow: hidden;
+  // position: sticky;
+  // top: 0;
+  // z-index: 999;
   .top-nav {
+    background-color: red;
     height: 50px;
     color: $white;
-    line-height: 50px;
+    width: 100%;
+    // line-height: 50px;
     text-align: center;
+    // position: absolute;
+    // position: relative;
+    box-sizing: border-box;
+
+    .fly {
+      span, span:before, span:after {
+        width: 32px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+      }
+
+        &:before {
+          content: '';
+          top: -6px;
+        }
+        &:after {
+          content: '';
+          top: 6px;
+        }
+      }
+    }
 
     h1 {
       font-size: 30px;
@@ -16,10 +46,10 @@
       margin: 0;
     }
 
-      h5 {
-        padding: 0;
-        margin: 0;
-      }
+    h5 {
+      padding: 0;
+      margin: 0;
+    }
 
     .search {
       background-color: $black;
@@ -32,7 +62,7 @@
         transform: skewX(20deg);
       }
     }
-  }
+  // }
 }
 
   .onglet {
@@ -69,16 +99,13 @@
 
 
 @media only screen and (min-width: 768px) {
-  .top-nav {
-    display: none;
-  }
-  .mobile-nav {
-    display: none;
-  }
   .left-nav {
     text-align: center;
     height: 100vh;
     background-color: #252d2f;
+    // position: sticky;
+    // top: 0;
+
 
     .link-edit {
       display: none;
@@ -89,10 +116,10 @@
     .name {
       display: none;
     }
-    .statut {
-      display: none;
-    }
-    .pseudo {
+    // .statut {
+    //   display: none;
+    // }
+    // .pseudo {
       display: none;
     }
     .xp-total, .notifications {
@@ -142,7 +169,7 @@
       }
     }
   }
-}
+// }
 
 
 @media only screen and (min-width: 1170px) {
@@ -176,26 +203,29 @@
         padding: 3px 5px 3px 10px;
       }
     }
-    h2 {
+    .name {
+      padding: 15px 5px 15px 5px;
+      h2 {
       font-size: 0.9rem;
       font-weight: 700;
-      padding: 10px 0 5px 0;
-    }
-    .statut {
-      color: $dark-grey;
-      font-size: 0.7rem;
-
-      span {
-        font-weight: 800;
+      padding-bottom: 2px;
       }
-    }
-    .pseudo {
-      color: $dark-grey;
-      font-size: 0.7rem;
-      span {
-        font-weight: 800;
+      .statut, .pseudo {
+        display: inline-block;
+        color: $dark-grey;
+        font-size: 0.7rem;
+        padding: 0;
+        margin: 0;
+        line-height: .05rem;
+        text-align: left;
+        span {
+          font-weight: 800;
+        }
       }
+     .pseudo {
+      text-align: right;
     }
+  }
     .xp-total, .notifications {
       margin : 10px 0;
       border-bottom: 1px solid $light;

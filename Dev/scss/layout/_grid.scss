@@ -14,20 +14,23 @@ body {
       display: grid;
       grid-template-rows: 50px 30px;
       grid-template-columns: repeat(3, 1fr);
+
       .top-nav {
         grid-row: 1 / 1;
         grid-column: 1 / 4;
         display: grid;
-        grid-template-columns: 1fr 3fr 2fr;
-        grid-template-areas: "fly titre search";
-        align-content: center;
+        grid-template-columns: 100px 3fr 1fr;
+        grid-template-areas: "hamburger titre search";
+        align-items: center;
 
         .fly {
-          grid-area: fly;
+          grid-area: hamburger;
         }
         .header--titre {
           grid-area: titre;
-          	// transform: skewX(-20deg);
+        }
+        .search {
+          grid-area: search;
         }
       }
     }
@@ -100,11 +103,10 @@ body {
       grid-area: gauche;
       display: grid;
       grid-template-columns: repeat(4, minmax(min-content, 50px));
-      grid-template-rows: repeat(7, auto);
+      grid-template-rows: repeat(6, auto);
       grid-template-areas:  "edit   edit     edit   edit"
                             "avatar avatar   links  links"
                             "name   name     name   name"
-                            "statut statut   pseudo pseudo"
                             "xp     xp       notif  notif"
                             "menu   menu     menu   menu"
                             "alerte alerte   alerte alerte";
@@ -124,14 +126,14 @@ body {
         display: inherit;
         grid-area: name;
       }
-      .statut {
-        display: inherit;
-        grid-area: statut;
-      }
-      .pseudo {
-        display: inherit;
-        grid-area: pseudo;
-      }
+      // .statut {
+      //   display: inherit;
+      //   grid-area: statut;
+      // }
+      // .pseudo {
+      //   display: inherit;
+      //   grid-area: pseudo;
+      // }
       .xp-total {
         grid-area: xp;
       }
